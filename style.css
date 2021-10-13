@@ -1,0 +1,63 @@
+body{
+    background-image: url("back6.jpg");
+    background-repeat: no-repeat;
+    size: 100%;
+    opacity: 0.7;
+}
+header{
+            
+    position: fixed;
+    
+}
+body h1{
+    font-family: 'Abril Fatface';font-size: 40px;
+    font-weight: 3px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    max-width: 500px;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: white;
+    border-radius: 3px;
+    border-width: 3px;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    float:left;
+}
+li a:hover {
+    color:yellowgreen ;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;font-weight: 2px;font: size 18px;
+    line-height: 50px;
+
+}
+th{
+    padding-right: 300px;
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    color: rgb(54, 45, 45);
+    text-align: center;
+
+ }
+
+
+    
