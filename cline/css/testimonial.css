@@ -1,0 +1,115 @@
+body{
+    background-color:#154076;
+    font-family: cursive;
+
+}
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+  }
+  
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  img{
+      width: 20%;
+      padding: 3px;
+      border-radius: 20px;
+      margin: 20px;
+      padding: 10px;
+
+  }
+  .checked {
+    color: orange;
+  }
+  .star{
+      margin-left: 150px;
+  }
+  main{
+      color: white;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  header{
+    
+    grid-area: header;
+
+}
+h1{
+    color: white;
+}
+
+  ul{
+    flex-direction: column;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    list-style-type: none;
+
+}
+ul li{
+    padding: 10px;
+    margin: 10px;
+}
+ul li i{
+    padding: 10px;
+}
+a{
+    color: blanchedalmond;
+    text-decoration: none;
+
+}
+a:hover {
+   
+   background-color: #6495ED;
+   
+   border-radius: 25px;
+   transition: 0.5s ease;
+}
+ #Fonthome{
+ 
+    font-size: 30px;
+}
+  
+/* --------------------------------@media---------------------------*/
+
+  @media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+    #main-image{
+        width: 70%;
+    }
+  }
+    @media (max-width: 750px) {
+
+        #main-image{
+            width: 70%;
+        }
+    
+  }
