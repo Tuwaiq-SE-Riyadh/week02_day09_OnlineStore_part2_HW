@@ -238,6 +238,11 @@ column-gap: 7px;
 
 }
 
+#Prodects img{
+  width: 260px;
+  height: 260px;
+}
+
 .filter-me {
   /* filter: blur(10px); */
   filter: opacity(70%);
@@ -254,11 +259,6 @@ column-gap: 7px;
     /* transition: 0.3s; */
     background-color: #ffffff;
     padding: 10px;
-  }
-
-  .child.img{
-    width: 260px;
-    height: 260px;
   }
   
   .child:hover {
@@ -287,6 +287,7 @@ column-gap: 7px;
   padding: 0;
 border: none;
 background: none;
+margin-left: 30%;
   
 }
 #cart:hover{
