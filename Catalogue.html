@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Catalogue Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<!-- ---------------------------nav-----------------------------------  -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand a0" href="Home.html" >Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-item nav-link active a0" href="Catalogue.html">Catalogue</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link a0" href="About.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link a0" href="Contact.html">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link a0" href="Login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="Cart.html" ><img src="Imges/icon_2.png" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ---------------------------nav-----------------------------------  -->
+
+
+<div class="d0" id="d9">
+
+
+<div class="c">
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="Imges/1.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">ROLEX</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Smooth and genuine leather upper</li>
+                <li>Round dial set on stainless steel case</li>
+                <li>Hourly and minute marked indices                </li>
+              </ul> 
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(1)">3000$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(1)">Add to cart</button>
+              <a href="Reviews1.html">
+              <button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a>
+
+            </small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/2.jfif" alt="Card image cap" height="150px">
+            <div class="card-body">
+            <h5 class="card-title">VERSACE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Matte finish durable metal aviator frames</li>
+                <li>100% UV Protection</li>
+                <li>Bridge Width: 14 mm ; Lens Width: 59 mm ; Bar Length: 140 mm</li>
+              </ul> 
+            </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(2)">2500$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(2)">Add to cart</button>
+              <a href="Reviews1.html">
+              <button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/3.jpg" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">NIKE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Mid-weight, warm poly-cotton blend fabric</li>
+                <li>TH Flex technology for added stretch and comfort</li>
+                <li>Hoodie neck with adjustable drawstrings</li>
+              </ul> </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(3)">100$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(3)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- -- -->
+
+<div>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="Imges/4.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">Yeezy</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Breathable and lightweight mesh upper</li>
+                <li>Eyelets with lace up closure for secure fit</li>
+               <li>OrthoLite sockliner and textile lining</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(4)">2000$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(4)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/5.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">ADIDAS</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Comfortable cotton twill fabric</li>
+                <li>Button to crown with ventilated eyelets</li>
+                <li>Adjustable buckle closure to reverse</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(5)">300$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(5)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/6.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">TOMMY HILFIGER</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Smooth and durable genuine leather upper</li>
+                <li>Secure with press-stud closure</li>
+                <li>Packed in a branded Armani Exchange box</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(6)">350$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(6)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+      </div>
+</div>
+    
+<!-- -- -->
+<div>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="Imges/7.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">Swarovski</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Slim linked rose gold plated bracelet with logo charm</li>
+                <li>Infinity charm with embellishments</li>
+                <li>Comes in branded Guess box</li>
+              </ul> </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(7)">600$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(7)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/8.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">VERSACE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Dual colour stainless steel ring</li>
+                <li>Comes packed in a Guess branded box</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(8)">40$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(8)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/9.jpg" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">NIKE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Pack of 3 pairs of socks</li>
+                <li>Soft, comfortable poly-cotton blend fabric</li>
+                <li>Elasticated cuffs for adjustable fit</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(9)">34$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(9)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+      </div>
+</div>
+    <!-- -- -->
+    <div>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="Imges/10.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">NIKE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Soft and comfortable cotton fabric</li>
+                <li>Contrast taping to sleeves</li>
+                <li>Crew neck and short sleeves</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(10)">304$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(10)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/11.jfif" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">CALVIN KLEIN</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Durable and stretchy textile upper</li>
+                <li>Full length measurement: 105cm</li>
+                <li>Secure adjustable pin-buckle closure</li>
+              </ul>
+            </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success btn-sm" onclick="addItem(11)">1900$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(11)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="Imges/12.jpg" alt="Card image cap" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">NIKE</h5>
+            <p class="card-text">Details:</p>
+            <ul>
+                <li>Durable and lightweight polyester upper</li>
+                <li>Spacious main compartment with zipper closure</li>
+                <li>Easy accessible front zipper slot</li>
+              </ul></div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a href="Cart.html"><button type="button" class="btn btn-success  btn-sm" onclick="addItem(12)">450$</button></a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addItem(12)">Add to cart</button>
+              <a href="Reviews1.html"><button type="button"  class="btn btn-secondary btn-sm">Reviews</button></a></small>
+          </div>
+        </div>
+      </div>
+</div>
+    
+</div>
+
+
+<!-- -------------------------------------------------- -->
+
+
+<footer class="f0">
+    <a href="https://twitter.com/" class="u0 text-primary"> Twitter </a>  |
+    <a href="https://www.instagram.com/" class="u0 text-primary"> Instagram</a>    |
+    <a href="Contact.html" class="u0 text-primary"> Contact </a>  |
+    <a href="About.html" class="u0 text-primary"> About Us</a>
+    <p class="u0">Creator By <a href="" class="u0"> Tameem Alsulmi </a></p>
+  </footer> 
+
+  <!-- ------------------------------------------------------- -->
+  <script src="JavaScript.js"></script>
+
+</body>
+</html>
