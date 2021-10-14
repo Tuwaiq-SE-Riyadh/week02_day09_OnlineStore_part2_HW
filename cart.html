@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cart Page</title>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/catalogue.html">Catalogue Page</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/cart.html">cart</a></li>
+        <li style="float:right"><a class="active" href="/Contact.html">Contact</a></li>
+      </ul>
+      
+      <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Your Cart</h1>
+      <hr>
+      <div id="cart" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></div>
+      <hr>
+      <input type="text" placeholder="discount coupons" id="inputDiscount">
+      <input type="submit" id="buttDiscount">
+
+      <br>
+      <hr>
+      <br>
+      
+      <form>
+        <label>Delivery Options:</label>
+        <select id="selcetedOption">
+          <option id="op1" value="20" selected>Standard Shipping - 20 SAR</option>
+          <option id="op2" value="50">Priority Shipping - 50 SAR</option>
+          <option id="op3" value="100">Express Shipping - 100 SAR</option>
+        </select>
+      </form>
+      <input  type="submit" id="buttDelivery">
+      <br>
+      <hr>
+      <h2 style="color: white; text-align: center; font-family:monospace;" id="totalPrice"></h2>
+      <div style="margin-left: 46%;">
+      <input type="submit" id="buttoConfirmOrder" value="conﬁrm order"> 
+    </div>
+
+
+
+      <script src="/main.js"></script>
+</body>
+</html>
