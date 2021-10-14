@@ -1,0 +1,172 @@
+
+#bodyGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+section {
+    display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  align-items: center;
+  justify-items: center; /* adjusted */
+  }
+
+.headGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.btnGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1rem;
+}
+.btnAdd{
+    transition: transform .2s;
+    
+}
+
+.btnColor{
+    background: url("YourPng.com1400x700.png");;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: rgb(8, 8, 8);
+}
+
+.btnAdd:hover{
+    transform: scale(1.1);
+}
+
+.titleShop{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:darkolivegreen;
+    font-family: 'Times New Roman', Times, serif;  
+}
+.centered{
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    padding:10%;
+}
+
+#parent{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* column-gap: 20px;
+    row-gap: 20px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.centerText{
+    display: grid;
+    align-items: center;
+    justify-content:center;
+}
+
+.lestGrid{
+    display: grid;
+    align-items: center;
+    justify-content:center;
+}
+
+.bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    justify-content:center;
+}
+
+.cen{
+    display: grid;
+    align-items: center;
+    justify-content:center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    }
+
+.text{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.grid-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: transform .2s; */
+}
+
+/* .grid-item:hover{
+    transform: scale(1.1);
+} */
+
+img{
+    max-width: 10rem;
+    max-height:10rem;
+    /* padding: 10%; */
+    
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v975-background-07-b-kqkr4ukm.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d92b38f7af4f92cbb48fb96c37560242");
+    background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+@media  screen and (max-width: 576px){
+    #parent{
+        display:grid;
+        grid-template-columns: 1fr;
+        /* column-gap: 20px;
+        row-gap: 20px; */
+        align-items: center;
+        justify-content: center;
+    }
+    .btnGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        column-gap: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    #parent{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        /* column-gap: 20px;
+        row-gap: 20px; */
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .btnGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        column-gap: 1rem;
+        
+       
+    }
+}

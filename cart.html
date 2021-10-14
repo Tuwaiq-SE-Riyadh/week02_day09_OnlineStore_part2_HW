@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bodyGrid">
+    <link rel="stylesheet" href="myStyle3.css">
+    <script src="main2.js"></script>
+
+    <section>
+        <form>
+            <label for="fname">Your cart have: </label><br><br>
+            <div class="items">
+            </div><br> <br> <br>
+            <label for="yourTotal" >The Total is:</label><br><br>
+            <div id="total"></div>
+            <label for="text">discount coupons:</label><br>
+            <input type="texts" id="copon" name="discount" class="btnColor"><br><br>
+            <input type="button" value="Confirm dscount" class="btnColor" onclick="disc()"><br><br>
+            <select name="delivery" id="del" class="btnColor" >
+                <optgroup label="Delivery Company" >
+                <option value="10">Fedex 10$</option>
+                <option value="15">Naqel 15$</option>
+                <option value="5">smsa 5$</option>
+                </optgroup>
+            </select><br><br>
+            <input type="button" value="Confirm Delivery Company" class="btnColor app" onclick="confirmDel()"><br><br><br>
+            
+            
+            <input type="button" value="Confirm Your Order" class="btnColor" onclick="lastButton()"><br><br><br>
+           
+          </form>
+    </section>
+</body>
+</html>

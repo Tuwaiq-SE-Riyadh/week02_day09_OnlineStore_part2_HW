@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Online Store
+        </title>
+        <link rel="stylesheet" href="myStyle.css">
+    </head>
+    <body id="bodyGrid" onload="clearCart()">
+        <div class="headGrid">
+
+            <p class="titleShop">Online Shop</p>
+            <p></p>
+            <div class="btnGrid ">    
+                <input class="btnAdd btnColor"  type="button" value="Login" >
+                <input class="btnAdd btnColor" type="button"  value="Sign up" >
+            </div>    
+        </div>
+
+
+
+            <div class="centered">
+                <div id="parent">
+                    <div class="btnAdd backGr"  > <p class="text"> Smart Watch</p>
+                        <div class="grid-item" >
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/2_a25aff7a-b5c4-4565-a111-6e1ce2d5b5f0.png?v=1624268771"  alt="smart" onclick="open1()">
+                        </div>
+                        <div class="centerText">it's smart watch that you can use it in several ways and this is shapes that already exist: </div>
+                        <ul class="lestGrid">
+                            <li><a href="https://m.media-amazon.com/images/I/7143fdzuALS._AC_SL1500_.jpg" target="_blank">Games</a> <br> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Smart watch for Games',350)"></li>
+                            <li><a href="https://www.dhresource.com/0x0/f2/albu/g8/M01/93/68/rBVaV1y-2ceAXwaoAAKpLuXXeew370.jpg" target="_blank">Sports</a> <br> <input type="button" value="quick add to cart" class="btnColor" style="margin-left: 0.001%;" onclick="addToCart('Smart watch for Sports',300)"></li>
+                            <li><a href="https://www.wareable.com/media/imager/201808/30836-posts.main_image.jpg" target="_blank">Medical</a></li><input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Smart watch for Medical Reasons',500)"></li>
+                        </ul>
+                    </div>
+
+
+
+                    
+                        <div class="btnAdd backGr"> <p class="text">Football</p>
+                        <div class="grid-item">
+                        <img src="https://www.pngarts.com/files/3/Adidas-Football-Transparent-Background-PNG.png" onclick="openFootballs()" alt="fottball" style='height: 80%; width: 80%; object-fit:cover'>
+                    </div>
+                    <div class="centerText">Here you can find footballs from different World Cups: </div>
+                        <ul class="lestGrid">
+                            <li> <a href="https://i.pinimg.com/736x/23/4f/bf/234fbfa66d09b57e6353b64c4dbe0534--soccer-ball-world-cup.jpg" target="_blank">World Cup 2002</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick=" addToCart('Football that used in World Cup 2002',60)"></li>
+                            <li><a href="https://c8.alamy.com/comp/CWAE2T/berlin-the-official-football-of-the-football-world-cup-2006-CWAE2T.jpg" target="_blank">World Cup 2006</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Football that used in World Cup 2006',50)"></li>
+                            <li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/1998_-_Tricolore_%28France%29_%284170715889%29.jpg/1200px-1998_-_Tricolore_%28France%29_%284170715889%29.jpg" target="_blank">World Cup 1998</a></li><input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;"onclick="addToCart('Football that used in World Cup 1998',80)"></li>
+                        </ul>   
+                    </div>                     
+                    
+
+        
+                        
+                    <div class="btnAdd backGr"> <p class="text">Coffee</p>
+                            <div class="grid-item">
+                                <img src="https://i.pinimg.com/originals/23/bd/26/23bd26dcbbb36c433553a25d10608433.png" onclick="openCoffes()" alt="coffe">
+                            </div>
+                            <div class="centerText">Here you can find different types of Coffe: </div>
+                        <ul class="lestGrid">
+                            <li> <a href="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2015/11/03/file-03-1446580882910044800.jpg?itok=F_PWzx12" target="_blank">Arabic Coffe</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Arabic Coffe',15)">
+                            <li><a href="https://cdn.shopify.com/s/files/1/0567/0361/5139/products/SpanishLatteAlto.jpg?v=1623098299" target="_blank">Spanish Latte</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;"onclick="addToCart('Spanish Latte',30)">
+                            <li><a href="https://i.ytimg.com/vi/3zBcpK52ZSM/maxresdefault.jpg" target="_blank">Homemade Cappuccino</a></li><input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Homemade Cappuccino',20)">
+                        </ul>
+                        </div>
+
+
+
+                        <div class="btnAdd backGr"> <p class="text">Tea</p>
+                        <div class="grid-item">
+                            <img src="Tea.png" onclick="openTea()" alt="Tea">
+                        </div>
+                        <div class="centerText">Here you can find different types of Tea: </div>
+                        <ul class="lestGrid">
+                            <li> <a href="https://image.shutterstock.com/image-photo/red-tea-on-wooden-table-260nw-1429392254.jpg" target="_blank">Red Tea</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Red Tea',65)">
+                            <li><a href="https://www.news-medical.net/image.axd?picture=2021%2F9%2Fshutterstock_251566309.jpg" target="_blank">Green Tea</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Green Tea',75)">
+                            <li><a href="https://static.onecms.io/wp-content/uploads/sites/9/2021/06/22/different-types-of-tea-FT-BLOG0621.jpg" target="_blank">Balck Tea</a></li> <input type="button" value="quick add to cart" class="btnColor " style="margin-left:0.001%;" onclick="addToCart('Black Tea',45)">
+                        </ul>
+                    </div>
+                    </div>
+        
+                    
+                </div>
+            
+        
+          <div class="bottom">
+              <div></div>
+              <div></div>
+              <div class="cen"><a href="aboutUs.html" style="color: blanchedalmond;" target="_blank"> About us</a> <br>
+                <a href="AskUs.html" style="color: blanchedalmond;" target="_blank">Ask Us</a><br>
+                <input class="btnAdd btnColor"  type="button" value="Go To Your Cart" onclick="openCart()">
+
+            </div>
+          </div> 
+          <script src="main.js"></script> 
+    </body >
+
+</html>
