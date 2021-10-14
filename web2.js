@@ -4,23 +4,21 @@ let Total=0;
 const continer=document.querySelector("#am")
 
 for(let i=1;i<localStorage.length;i++){
+let g=localStorage.getItem("product"+i)
 const p=document.createElement("p")
 const a=document.createElement("a")
 a.href="#"
-a.innerText="product"
+a.innerText=JSON.parse(g)[0]
 let sp=document.createElement("span")
 sp.className="price";
-sp.innerText=localStorage.getItem("product"+i)
-
-Total=Total+parseFloat(localStorage.getItem("product"+i))
-
+sp.innerText=JSON.parse(g)[1]
+Total=Total+parseFloat(JSON.parse(g)[1])
 continer.append(p)
 p.append(a)
-p.append(sp)}
+p.append(sp)
+console.log(Total)
+}
 
-// const hr=document.createElement("hr")
-// continer.append(hr)
-//  <p>Total <span class="price" style="color:black"><b>$30</b></span></p> 
 let pp=document.createElement("p")
 pp.innerText="Total with VAT 15%"
 let spsp=document.createElement("span")
