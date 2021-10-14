@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+}
+.underline{
+    text-decoration: underline;
+}
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(241, 232, 219);
+}
+.logoImag {
+    position: absolute;
+}
+.navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginIcon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 20px;
+}
+.homePageBackground{
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    background-color: #58b8ab; 
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 20ch;
+    border-color: aliceblue;
+    
+}
+
+.contentOfPage{
+    width: 100%;
+    height: 675px;
+}
+
+
+.navbar .navigation ul li{
+    list-style: none;
+    float:left;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.navbar .navigation ul li a{
+    text-decoration: none;
+    color:black;
+    
+    
+}
+.navbar .navigation ul li a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #d1caca;
+    opacity: 0.9;
+    color: black;
+    font-size: 20px;
+    font-weight: 400px;
+    font-family: Cursive;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px 50px;
+    text-align: center;
+}
+.btn:hover{
+   background-color: black;
+   color: #d1caca;
+   border-radius: 50px 20px;
+}
+
+.Testimonials{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #4b4545;
+    opacity: 0.9;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 400px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px 20px;
+    text-align: center;
+}
+/* ---------flexbox--------- */
+/* ---------flexbox--------- */
+/* ---------flexbox--------- */
+/* Note : I get some flex properties for W3School */
+.flexbox{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 15px;
+    opacity: 0.9;
+    width: 220px;
+    height: 120px;
+}
+.container::after {
+    clear: both;
+    display: table;
+}
+.container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    
+}
+.container img:hover {
+    transform:translate(+25%, +25%) scale(3);
+
+}
+.container span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+.filter1{
+    filter: grayscale(100%);
+}
+.filter2{
+    filter: blur(1px);
+}
+
+
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+
+/*  Small devices (phones, 576px and up) */
+@media  (max-width: 576px) {
+
+    .navbar .navigation ul li{
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+    .navbar .navigation ul li{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .flexbox{
+        position: absolute;
+        /* bottom: 5%; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container {
+        border: 1px solid #ccc;
+        background-color: #eee;
+        border-radius: 3px;
+        padding: 8px;
+        margin: 5px;
+        opacity: 0.9;
+        width: auto;
+        height: auto;
+    }
+    
+}

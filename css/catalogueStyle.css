@@ -1,0 +1,147 @@
+/******************* navbar ********************/
+/******************* navbar ********************/
+/******************* navbar ********************/
+body{
+    margin: 0;
+    background-color: rgb(191, 196, 202);
+}
+.underline{
+    text-decoration: underline;
+}
+#shopping-cart{
+    margin-right: 5px;
+}
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(241, 232, 219);
+}
+.logoImag {
+    position: absolute;
+}
+.navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginIcon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 20px;
+}
+.button {
+    background-color: #58b8ab; 
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 20ch;
+    border-color: aliceblue;
+    
+}
+.navbar .navigation ul li{
+    list-style: none;
+    float:left;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold; 
+}
+.navbar .navigation ul li a{
+    text-decoration: none;
+    color:black;
+    
+    
+}
+.navbar .navigation ul li a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+.contentOfPage{
+    width: 100%;
+    height: auto;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900px;
+    font-style: italic;
+}
+.itemImg{
+    padding: 2px;
+}
+.grid-container {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    /* font-size:50px; */
+    text-align: center;
+    border-image:auto
+}
+
+/* ------ */
+/* ------ */
+/* ------ */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+button{
+    width: 100%;
+    border-radius: 20px 50px;
+    text-align: center;
+    
+}
+button:hover{
+    background-color: black;
+    color: #d1caca;
+    border-radius: 50px 20px;
+}
+
+
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+
+/*  Small devices (phones, 576px and up) */
+@media  (max-width: 576px) {
+    .grid-container {
+        grid-template-columns:  auto auto !important;
+    }
+    .navbar .navigation ul li{
+        padding: 5px !important;
+        font-size: 12px !important;
+    }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        grid-template-columns: auto auto auto;
+        padding: 5px;
+    }  
+    .navbar .navigation ul li{
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+}
