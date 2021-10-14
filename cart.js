@@ -58,7 +58,7 @@ const characters = [
     }
 ];
 
-// display Product list
+// display Product list 
 if (window.location.href.match('Products.html') != null) {
     for (let i = 0; i < characters.length; i++) {
         const Chname = characters[i].name;

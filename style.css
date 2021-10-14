@@ -169,7 +169,7 @@ body {
 
 
 .Testimonials{
-  margin: 8% 10% 0 8%;
+  margin: 5% 10% 5% 8%;
 
 }
 
@@ -276,7 +276,7 @@ column-gap: 7px;
       overflow: hidden;
       text-overflow: ellipsis;
 }
-
+ 
 .fa {
   padding: 0px;
 }
@@ -338,6 +338,57 @@ margin-left: 30%;
 
   li{
     margin: 0;
+  }
+
+  .parent{
+    display: grid;
+    justify-content: center;
+    margin: 10% 0;
+  }
+  .summary_card {
+    background-color: #fff;
+    width: 450px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .order_price,.order_service,
+  .order_total,.card_item,.after_cupon {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr ;
+  }
+  
+  .order_price p,
+  .order_service p,
+  .after_cupon p {
+    color: #a1a1a1;
+  }
+  
+  .order_price h4,.order_service h4,
+  .after_cupon h4,.order_total h4,
+  .card_item h4
+  {
+    text-align: end;
+  }
+
+  .order_total p {
+    font-weight: 600;
+  }
+
+  .shipping_card{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .proced_payment{
+    padding: 10px 20px;
+    width: 100%;
+    border: 2px solid #f5f5f5;
+    background-color: rgb(131, 58, 58);
+    color: rgb(255, 255, 255);
   }
 
 
