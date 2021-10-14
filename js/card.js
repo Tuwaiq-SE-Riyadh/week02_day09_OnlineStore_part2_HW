@@ -46,21 +46,122 @@ function appendElemnt(ItmeName,price,image)
 
 }
 
-         // the total cost (remember to add VAT!).
+         // The total cost (remember to add VAT!).
+         // Create a form which allows for “discount coupons”.
 
 //  #####################  Get total Price #####################
-    let totalPrice = getTotalPrice()
+    let totalPrice = getTotalPrice();
+
 //  #####################  Show Price Before VAT #####################
-    showTotalPriceBeforeVAT(totalPrice)
+    showTotalPriceBeforeVAT(totalPrice);
+
+    // Create forms to allow a user to select “collection” or “delivery”.
+    selectCollectionOrDelivery()
+
+    // Create forms for different delivery options.
+  //  selectDifferentDeliveryOptions()
+
 //  #####################  Show VAT #####################
-    let vatValue =  showVAT(totalPrice)
+    let vatValue =  showVAT(totalPrice);
 //  #####################  Show Price After VAT #####################
-    showTotalPriceAfterVAT(totalPrice,vatValue)
+    showTotalPriceAfterVAT(totalPrice,vatValue);
+//  #####################  Discount coupons #####################
+    discountCoupons()
+
+
+
+
+
+
+
+
+
+
+
+    function getTotalPrice()
+    {
+        // get the totalPraice
+        let alldata = localStorage.getItem('index')
+        let afterParse = JSON.parse(alldata)
+
+        // see the length of array data on the localStorage
+            // console.log(afterParse.length)
+            // console.log(afterParse)
+
+        // calculate total
+        let total = 0 ;
+        for(let i = 0 ; i <= afterParse.length-1 ;i++ )
+        {
+            total += afterParse[i][1]['price'];
+        }
+
+        return total;
+    }
+
+    function selectCollectionOrDelivery()
+    {
+        const tbodyTag = document.querySelector('tbody')
+
+    
+        const TrTag = document.createElement("tr")
+        tbodyTag.append(TrTag);
+    
+        const CollectionOrDelivery_td_paragraf = document.createElement("td")
+                CollectionOrDelivery_td_paragraf.innerHTML="Select Collection Or Delivery"
+                CollectionOrDelivery_td_paragraf.classList.add("text-center")
+
+
+        const CollectionOrDelivery_td_value = document.createElement("td")
+                const selectTag = document.createElement("select")
+                        selectTag.setAttribute("onchange","setCollectionOrDeliveryOnLocalStorage(this)")
+                                CollectionOrDelivery_td_value.append(selectTag)
+                                    const op1 = document.createElement("option")
+                                            op1.innerHTML="collection"
+                                            op1.value="collection"
+                                    const op2 = document.createElement("option")
+                                            op2.innerHTML="delivery"
+                                            op2.value="delivery"
+
+                                    selectTag.append(op1)
+                                    selectTag.append(op2)
+
+
+        const CollectionOrDelivery_td_selected = document.createElement("td")
+                CollectionOrDelivery_td_selected.setAttribute("id","C_or_D")
+                CollectionOrDelivery_td_selected.classList.add("text-center")
+                let getCollectionOrDelivery_From_LocalStorage = localStorage.getItem('CollectionOrDelivery')
+                CollectionOrDelivery_td_selected.innerHTML=getCollectionOrDelivery_From_LocalStorage
+
+
+
+    
+        TrTag.append(CollectionOrDelivery_td_paragraf)
+        TrTag.append(CollectionOrDelivery_td_value)
+        TrTag.append(CollectionOrDelivery_td_selected)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function showTotalPriceBeforeVAT(totalPrice)
 {
     const tbodyTag = document.querySelector('tbody')
+
+    const brbrbr = document.createElement("br")
+    tbodyTag.append(brbrbr);
 
     const TrTag = document.createElement("tr")
     tbodyTag.append(TrTag);
@@ -76,30 +177,11 @@ function showTotalPriceBeforeVAT(totalPrice)
 
     TrTag.append(vat_td)
     TrTag.append(vat_value)
-
 }
 
 
 
-function getTotalPrice()
-{
-    // get the totalPraice
-    let alldata = localStorage.getItem('index')
-    let afterParse = JSON.parse(alldata)
 
-    // see the length of array data on the localStorage
-        // console.log(afterParse.length)
-        // console.log(afterParse)
-
-    // calculate total
-    let total = 0 ;
-    for(let i = 0 ; i <= afterParse.length-1 ;i++ )
-    {
-        total += afterParse[i][1]['price'];
-    }
-
-    return total;
-}
 
 
 function showVAT()
@@ -145,4 +227,78 @@ function showTotalPriceAfterVAT(totalPrice,vatValue)
 
     TrTag.append(total_td)
     TrTag.append(total_value)
+}
+
+function discountCoupons()
+{
+    const tbodyTag = document.querySelector('tbody')
+
+    const TrTag = document.createElement("tr")
+    tbodyTag.append(TrTag);
+
+    const coupon_td_paragraf = document.createElement("td")
+    coupon_td_paragraf.classList.add("text-center")
+    coupon_td_paragraf.innerHTML=" Add Coupon : ";
+
+        const coupon_td_input = document.createElement("td")
+                const coupon_input = document.createElement("input")
+                const coupon_button = document.createElement("button")
+                        coupon_button.innerHTML="Apply"
+
+        const coupon_td_value = document.createElement("td")
+                coupon_td_value.classList.add("text-center")
+                coupon_td_value.innerHTML="No coupon applied";
+
+                coupon_td_input.append(coupon_input)
+                coupon_td_input.append(coupon_button)
+
+    TrTag.append(coupon_td_paragraf)
+    TrTag.append(coupon_td_input)
+    TrTag.append(coupon_td_value)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------
+
+function setCollectionOrDeliveryOnLocalStorage(selectObject)
+{
+    // https://stackoverflow.com/questions/5024056/how-to-pass-parameters-on-onchange-of-html-select
+    let value = selectObject.value; 
+    localStorage.setItem("CollectionOrDelivery",value)
+
+    // show the selected to id="C_or_D"
+    let outputofC_or_D = document.querySelector("#C_or_D")
+        outputofC_or_D.innerHTML=value
+
+
+        if(value == "collection")
+        {
+            console.log("cc")
+        }
+        else{
+            console.log("ddd")
+        }
+    
 }
