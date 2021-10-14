@@ -58,6 +58,22 @@ const characters = [
     }
 ];
 
+// class of Products
+class product{
+    constructor(id , name , price , description ,image){
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.image = image;
+    }
+
+    info(){
+        console.log("id: "+this.id + "name: "+ this.name+ "price: "+
+        this.price+ "descriptin: "+this.description+"image: "+ this.image);
+    }
+}
+
 // display Product list 
 if (window.location.href.match('Products.html') != null) {
     for (let i = 0; i < characters.length; i++) {
@@ -127,7 +143,9 @@ function matchdata(name) {
     }
 }
 
+// Cart Prosses
 // calculating total price
+if (window.location.href.match('cart.html') != null) {
 let result = 0;
 const total = document.querySelector("#total");
 const VAT = document.querySelector("#VAT");
@@ -195,5 +213,58 @@ const payment = document.querySelector(".proced_payment");
 payment.addEventListener("click", function() {
     alert("The Order was successful and the Reference number is " +parseInt(Math.random()*10000));
 });
+}
 
 
+const AddProduct = document.querySelector("#AddProduct");
+AddProduct.addEventListener("click", function() {
+    let name = prompt("Product name: ");
+    let price = prompt("Product Price: ");
+    let description = prompt("Product description: ");
+    let image = prompt("Product image URL: ");
+
+    const newProduct = new product(parseInt(Math.random()*1000000),name,price,description,image);
+
+    characters.push(newProduct);
+    console.log(newProduct);
+
+    populateProduct(newProduct);
+
+
+
+});
+
+function populateProduct(newProduct) {
+    const superdiv = document.querySelector("#Prodects");
+    const child = document.createElement("div");
+    child.className = "child";
+
+    const img =document.createElement("img");
+    const childContent = document.createElement("div");
+    childContent.className = "child-content";
+
+    const headingName =document.createElement("h3");
+    const desc =document.createElement("p");
+    desc.className = "description";
+    const paraghprice =document.createElement("p");
+    const btn = document.createElement("button");
+    btn.id = "cart";
+    btn.value = newProduct.name;
+    btn.innerText = "Soon !";
+
+    img.src = newProduct.image;
+    headingName.innerText = newProduct.name;
+    desc.innerText = newProduct.description;
+    paraghprice.innerText = newProduct.price + " SR";
+
+
+    childContent.append(headingName);
+    childContent.append(desc);
+    childContent.append(paraghprice);
+    childContent.append(btn);
+    
+
+    child.append(img);
+    child.append(childContent);
+    superdiv.append(child);
+  }
