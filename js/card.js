@@ -49,24 +49,27 @@ function appendElemnt(ItmeName,price,image)
          // The total cost (remember to add VAT!).
          // Create a form which allows for “discount coupons”.
 
-//  #####################  Get total Price #####################
-    let totalPrice = getTotalPrice();
-
-//  #####################  Show Price Before VAT #####################
-    showTotalPriceBeforeVAT(totalPrice);
+//  #####################  Get total Price  & set the total price to local storage (totalPrice)#####################
+    set_and_caluculateTotalPrice();
 
     // Create forms to allow a user to select “collection” or “delivery”.
     selectCollectionOrDelivery()
 
     // Create forms for different delivery options.
-    selectDifferentDeliveryOptions()
+    let valueOfDelivery =  selectDifferentDeliveryOptions()
 
-//  #####################  Show VAT #####################
-    let vatValue =  showVAT(totalPrice);
-//  #####################  Show Price After VAT #####################
-    showTotalPriceAfterVAT(totalPrice,vatValue);
+    //  #####################  Show Price Before VAT #####################
+    showTotalPriceBeforeVAT(valueOfDelivery);
+
+//  ##################### set & Show VAT #####################
+    setVAT(valueOfDelivery)
+
+    showVAT(); 
+
 //  #####################  Discount coupons #####################
     discountCoupons()
+//  #####################  Show Price After VAT #####################
+    showTotalPriceAfterVAT();
 
 
 
@@ -78,7 +81,24 @@ function appendElemnt(ItmeName,price,image)
 
 
 
-    function getTotalPrice()
+    function setVAT(valueOfDelivery)
+    {
+        let pr = localStorage.getItem("totalPrice")
+        let pr_after_parse = JSON.parse(pr) 
+
+        let value_of_vat = (pr_after_parse + valueOfDelivery) * 0.15
+        localStorage.setItem("VAT",value_of_vat);
+        return value_of_vat;
+    }
+
+
+
+
+
+
+
+
+    function set_and_caluculateTotalPrice()
     {
         // get the totalPraice
         let alldata = localStorage.getItem('index')
@@ -95,13 +115,16 @@ function appendElemnt(ItmeName,price,image)
             total += afterParse[i][1]['price'];
         }
 
-        return total;
+        localStorage.setItem("totalPrice" , total)
+        
     }
 
     function selectCollectionOrDelivery()
     {
         const tbodyTag = document.querySelector('tbody')
 
+        const brbrbr = document.createElement("br")
+        tbodyTag.append(brbrbr);
     
         const TrTag = document.createElement("tr")
         tbodyTag.append(TrTag);
@@ -147,7 +170,6 @@ function appendElemnt(ItmeName,price,image)
 
     
         const TrTag = document.createElement("tr")
-            TrTag.setAttribute("id","DeliveryOptions")
             tbodyTag.append(TrTag);
     
         const Delivery_td_paragraf = document.createElement("td")
@@ -157,6 +179,7 @@ function appendElemnt(ItmeName,price,image)
 
         const Delivery_td_value = document.createElement("td")
                 const selectTag = document.createElement("select")
+                            selectTag.setAttribute("id","DeliveryOptions")
                             selectTag.setAttribute("onchange","setDeliveryOnLocalStorage(this)")
                                 Delivery_td_value.append(selectTag)
                                     const op1 = document.createElement("option")
@@ -187,6 +210,7 @@ function appendElemnt(ItmeName,price,image)
         TrTag.append(Delivery_td_value)
         TrTag.append(Delivery_td_selected)
 
+        return JSON.parse(Delivery_From_LocalStorage)
     }
 
 
@@ -202,12 +226,10 @@ function appendElemnt(ItmeName,price,image)
 
 
 
-function showTotalPriceBeforeVAT(totalPrice)
+function showTotalPriceBeforeVAT( valueOfDelivery)
 {
     const tbodyTag = document.querySelector('tbody')
 
-    const brbrbr = document.createElement("br")
-    tbodyTag.append(brbrbr);
 
     const TrTag = document.createElement("tr")
     tbodyTag.append(TrTag);
@@ -218,8 +240,11 @@ function showTotalPriceBeforeVAT(totalPrice)
         vat_td.innerHTML=" Total Price ";
 
         const vat_value = document.createElement("td")
+        vat_value.setAttribute("id","Total_Price_id")
         vat_value.classList.add("text-center")
-        vat_value.innerHTML=totalPrice
+        let pr = localStorage.getItem("totalPrice")
+        let pr_after_parse = JSON.parse(pr) 
+        vat_value.innerHTML= pr_after_parse+ valueOfDelivery 
 
     TrTag.append(vat_td)
     TrTag.append(vat_value)
@@ -244,7 +269,8 @@ function showVAT()
 
         const vat_value = document.createElement("td")
         vat_value.classList.add("text-center")
-        let vatVal = totalPrice*0.15;
+
+        let vatVal = localStorage.getItem("VAT")
         vat_value.innerHTML=vatVal
 
     TrTag.append(vat_td)
@@ -254,7 +280,7 @@ function showVAT()
 }
 
 
-function showTotalPriceAfterVAT(totalPrice,vatValue)
+function showTotalPriceAfterVAT()
 {
 
     const tbodyTag = document.querySelector('tbody')
@@ -269,7 +295,9 @@ function showTotalPriceAfterVAT(totalPrice,vatValue)
 
         const total_value = document.createElement("td")
         total_value.classList.add("text-center")
-        total_value.innerHTML= totalPrice - vatValue
+        let pr = localStorage.getItem("totalPrice")
+        let pr_after_parse = JSON.parse(pr) 
+        total_value.innerHTML= pr_after_parse
 
     TrTag.append(total_td)
     TrTag.append(total_value)
@@ -344,11 +372,13 @@ function setCollectionOrDeliveryOnLocalStorage(selectObject)
         {
             // hidden
             disable_DeliveryOptions_tr.style.visibility="hidden";
+
+                // set itme of Delivery 0 beques its collection
+                localStorage.setItem("Delivery",0)
         }
         else{
             // visible
             disable_DeliveryOptions_tr.style.visibility="visible";
-
         }
 
 }
@@ -361,4 +391,5 @@ function setDeliveryOnLocalStorage(selectObject)
     // show the selected to id="D_options"
     let outputofD_options = document.querySelector("#D_options")
         outputofD_options.innerHTML=value
+
 }
