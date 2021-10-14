@@ -59,7 +59,7 @@ function appendElemnt(ItmeName,price,image)
     selectCollectionOrDelivery()
 
     // Create forms for different delivery options.
-  //  selectDifferentDeliveryOptions()
+    selectDifferentDeliveryOptions()
 
 //  #####################  Show VAT #####################
     let vatValue =  showVAT(totalPrice);
@@ -107,7 +107,7 @@ function appendElemnt(ItmeName,price,image)
         tbodyTag.append(TrTag);
     
         const CollectionOrDelivery_td_paragraf = document.createElement("td")
-                CollectionOrDelivery_td_paragraf.innerHTML="Select Collection Or Delivery"
+                CollectionOrDelivery_td_paragraf.innerHTML="Select Delivery or Collection"
                 CollectionOrDelivery_td_paragraf.classList.add("text-center")
 
 
@@ -116,11 +116,11 @@ function appendElemnt(ItmeName,price,image)
                         selectTag.setAttribute("onchange","setCollectionOrDeliveryOnLocalStorage(this)")
                                 CollectionOrDelivery_td_value.append(selectTag)
                                     const op1 = document.createElement("option")
-                                            op1.innerHTML="collection"
-                                            op1.value="collection"
+                                            op1.innerHTML="delivery"
+                                            op1.value="delivery"
                                     const op2 = document.createElement("option")
-                                            op2.innerHTML="delivery"
-                                            op2.value="delivery"
+                                            op2.innerHTML="collection"
+                                            op2.value="collection"
 
                                     selectTag.append(op1)
                                     selectTag.append(op2)
@@ -141,7 +141,53 @@ function appendElemnt(ItmeName,price,image)
     }
 
 
+    function selectDifferentDeliveryOptions()
+    {
+        const tbodyTag = document.querySelector('tbody')
 
+    
+        const TrTag = document.createElement("tr")
+            TrTag.setAttribute("id","DeliveryOptions")
+            tbodyTag.append(TrTag);
+    
+        const Delivery_td_paragraf = document.createElement("td")
+                Delivery_td_paragraf.innerHTML="selectDifferentDeliveryOptions"
+                Delivery_td_paragraf.classList.add("text-center")
+
+
+        const Delivery_td_value = document.createElement("td")
+                const selectTag = document.createElement("select")
+                            selectTag.setAttribute("onchange","setDeliveryOnLocalStorage(this)")
+                                Delivery_td_value.append(selectTag)
+                                    const op1 = document.createElement("option")
+                                            op1.innerHTML="Aramex for 10$"
+                                            op1.value=10
+                                    const op2 = document.createElement("option")
+                                            op2.innerHTML="DHL for 20$"
+                                            op2.value=20
+                                    const op3 = document.createElement("option")
+                                            op3.innerHTML="FedEx for 5$"
+                                            op3.value=5
+
+                                    selectTag.append(op1)
+                                    selectTag.append(op2)
+                                    selectTag.append(op3)
+
+
+        const Delivery_td_selected = document.createElement("td")
+                Delivery_td_selected.setAttribute("id","D_options")
+                Delivery_td_selected.classList.add("text-center")
+                let Delivery_From_LocalStorage = localStorage.getItem('Delivery')
+                Delivery_td_selected.innerHTML=Delivery_From_LocalStorage
+
+
+
+    
+        TrTag.append(Delivery_td_paragraf)
+        TrTag.append(Delivery_td_value)
+        TrTag.append(Delivery_td_selected)
+
+    }
 
 
 
@@ -293,12 +339,26 @@ function setCollectionOrDeliveryOnLocalStorage(selectObject)
         outputofC_or_D.innerHTML=value
 
 
+        let disable_DeliveryOptions_tr = document.querySelector("#DeliveryOptions")
         if(value == "collection")
         {
-            console.log("cc")
+            // hidden
+            disable_DeliveryOptions_tr.style.visibility="hidden";
         }
         else{
-            console.log("ddd")
+            // visible
+            disable_DeliveryOptions_tr.style.visibility="visible";
+
         }
-    
+
+}
+
+function setDeliveryOnLocalStorage(selectObject)
+{
+    let value = selectObject.value; 
+    localStorage.setItem("Delivery",value)
+
+    // show the selected to id="D_options"
+    let outputofD_options = document.querySelector("#D_options")
+        outputofD_options.innerHTML=value
 }
