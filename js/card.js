@@ -70,6 +70,8 @@ function appendElemnt(ItmeName,price,image)
     discountCoupons()
 //  #####################  Show Price After VAT #####################
     showTotalPriceAfterVAT();
+//  #####################  check For Coupons #####################
+checkForCoupons()
 
 
 
@@ -294,10 +296,19 @@ function showTotalPriceAfterVAT()
     total_td.innerHTML=" Total Price After 15% VAT ";
 
         const total_value = document.createElement("td")
-        total_value.classList.add("text-center")
+                total_value.setAttribute("id","total_value")
+                total_value.classList.add("text-center")
+
         let pr = localStorage.getItem("totalPrice")
         let pr_after_parse = JSON.parse(pr) 
-        total_value.innerHTML= pr_after_parse
+
+        let vat = localStorage.getItem("VAT")
+        let vat_after_parse = JSON.parse(vat) 
+
+        let Delivery = localStorage.getItem("Delivery")
+        let Delivery_after_parse = JSON.parse(Delivery) 
+
+        total_value.innerHTML= pr_after_parse + vat_after_parse + Delivery_after_parse
 
     TrTag.append(total_td)
     TrTag.append(total_value)
@@ -316,11 +327,15 @@ function discountCoupons()
 
         const coupon_td_input = document.createElement("td")
                 const coupon_input = document.createElement("input")
+                            coupon_input.setAttribute("id","coupon_input")
                 const coupon_button = document.createElement("button")
+                            coupon_button.setAttribute("id","coupon_button")
+                        
                         coupon_button.innerHTML="Apply"
 
         const coupon_td_value = document.createElement("td")
                 coupon_td_value.classList.add("text-center")
+                coupon_td_value.setAttribute("id","coupon_td_value")
                 coupon_td_value.innerHTML="No coupon applied";
 
                 coupon_td_input.append(coupon_input)
@@ -392,4 +407,38 @@ function setDeliveryOnLocalStorage(selectObject)
     let outputofD_options = document.querySelector("#D_options")
         outputofD_options.innerHTML=value
 
+}
+
+
+
+
+function checkForCoupons()
+{
+    // Only we have Coupons the discount for 10%
+    const listOfCoupons = ["KSA10","S10","Z10"]
+    let CouponsButton = document.querySelector("#coupon_button")
+    CouponsButton.addEventListener("click", function(){
+
+        let Couponsinput = document.querySelector("#coupon_input")
+            let valueOfCouponsinput =  Couponsinput.value ;
+            CouponsValidate(valueOfCouponsinput,listOfCoupons)
+    });
+}
+
+function CouponsValidate(valueOfCouponsinput,listOfCoupons)
+{
+    const coupon_td_value = document.querySelector("#coupon_td_value")
+    const total_value = document.querySelector("#total_value")
+
+    let trueOrFalse =  listOfCoupons.includes(valueOfCouponsinput)
+    if(trueOrFalse)
+    {
+        let showTotalAfterCoupon = parseInt(total_value.innerHTML)
+        showTotalAfterCoupon = showTotalAfterCoupon - (showTotalAfterCoupon*.10)
+        total_value.innerHTML= showTotalAfterCoupon
+        coupon_td_value.innerHTML="10% Discount !!!"
+    }
+    else{
+        coupon_td_value.innerHTML="Wrong coupon code"
+    }
 }
