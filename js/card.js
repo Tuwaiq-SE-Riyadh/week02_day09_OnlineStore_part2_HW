@@ -442,3 +442,12 @@ function CouponsValidate(valueOfCouponsinput,listOfCoupons)
         coupon_td_value.innerHTML="Wrong coupon code"
     }
 }
+
+
+
+function conﬁrmOrder()
+{
+    let randomNumber = Math.floor(Math.random() * 99999);
+    alert("Successful Order !! " + '\n'  +"Your Order Number is : #" + randomNumber)
+
+}
