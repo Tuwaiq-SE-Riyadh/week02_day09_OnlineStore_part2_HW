@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="HomePageStyle.css">
+</head>
+<body>
+
+    <div class= container>
+
+        <!----------------------------------------------navbar------------------------------------------>
+        
+
+           
+                 <div class="navbar">
+                   
+
+                        <ul>
+                                
+                                <li class="nav"><a href="CataloguePage.html">Products</a></li>
+                                <li class="nav"><a href="https://github.com/enterprise/contact#:~:text=Customer%20%EE%80%80Support%EE%80%81%20for%20%EE%80%80GitHub%EE%80%81%20Enterprise%20Other%20Tell%20us,request.%20Phone%20%2B1%20%28877%29%20958-8742.%20%EE%80%80GitHub%EE%80%81%20mailing%20address">Contact</a></li>
+                                <li class="nav"><a href="logInPage.html"><b>Sign In</b></a></li>
+                               
+                              </ul>
+
+                              <div class="icon" onclick="cartIcon()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                                      </svg>
+                            </div>
+                              
+                    
+                </div>
+            
+        
+        <!---------------------------end of navbar-------------------------------------------------->
+
+
+        <!------------------------------------main------------------------------------------------->
+        <div class="main">
+            <h5>"Welcome to our magical
+                <br>  candle’s world"</h5>
+                <button class="button"><b>Our Products</b></button>
+
+            </div>
+        <!--------------------------------------end of main------------------------------------------------>
+
+
+
+        <!----------------------------------------testimonial-------------------------------->
+        <div class="quote">
+            <!-------use W3school to learn how to code the quote function------>
+
+            <div class="center">
+
+                <div class="mySlides">
+                        <q>I have not failed. I've just found <br>
+                            10,000 ways that won't work.</q>
+                        <p class="author">- John Keats</p>
+                      </div>
+                      
+                      <div class="mySlides">
+                            <q>I have not failed. I've just found <br>
+                                10,000 ways that won't work.</q>
+                        <p class="author">- Ernest Hemingway</p>
+                      </div>
+                      
+                      <div class="mySlides">
+                        <q>I have not failed. I've just found <br>
+                             10,000 ways that won't work.</q>
+                        <p class="author">- Thomas A. Edison</p>
+                      </div>
+                    </div>
+                      <a class="prev" onclick="plusSlides(-1)">❮</a>
+                      <a class="next" onclick="plusSlides(1)">❯</a>
+                      
+                      </div>
+                      
+                     
+                      
+                      <script>
+                      var slideIndex = 1;
+                      showSlides(slideIndex);
+                      
+                      function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                      }
+                      
+                      function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                      }
+                      
+                      function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {slideIndex = 1}    
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                      }
+                      </script>
+                      </div>
+        <!------------------------------end of testimonial-------------------------------------->
+
+
+        <!------------------------------------------Footer----------------------------------------->
+        <div class="Footer">
+                <ul>
+                                
+                        <li class="liFooter"><a href="#">Resources</a></li>
+                        <li class="liFooter"><a href="#">Help</a></li>
+                        <li class="liFooter"><a href="#">FAQ</a></li>
+                       
+                      </ul>
+
+                      <ul>
+                                
+                            <li class="liFooter"><a href="#">Privacy Police</a></li>
+                            <li class="liFooter"><a href="#">Terms & Condition</a></li>
+                            <li class="liFooter"><a href="#">About</a></li>
+                           
+                          </ul>
+
+                          <ul>
+                                
+                                <li class="liFooter"><a href="#">Contact Details</a></li>
+                                <li class="liFooter"><a href="#">Location</a></li>
+                                <li class="liFooter"><a href="#">(+000) 000-0000</a></li>
+                                <li class="liFooter"><a href="#">11 a.m - 12 p.m</a></li>
+
+                               
+                              </ul>
+
+                              <ul>
+                                
+                                    <li class="liFooter"><a href="#"><b>Sign Up</b> for Newsletter</a></li>
+                                    
+                                   
+                                  </ul>
+            </div>
+        <!----------------------------------end of Footer----------------------------------------->
+
+
+    
+        <script src="project.js"></script>   
+</body>
+</html>
