@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- <link rel="stylesheet" href="../fontausom/css/all.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <link rel="stylesheet" href="../css/home.css">
+    </head>
+    <body>
+        <div class="contener" id="UP">
+        <header >
+            <p id="title"><b> #HAPPINESS Online</b><p>
+                <ul>
+                    <li id="navcenter"> <a href="about.html"> <i class="fas fa-info"></i> </i>about us</a> </li>
+                    <li> <a href="#subscribe"> <i class="far fa-envelope"></i> subscribe </a></li>
+                    <li id="navend"> <a href="#"><i class="fas fa-sign-in-alt"></i> login</a> </li>
+                    <li id="navend"> <a onclick="shopping()" href="../html/shopping.html"><i class="fas fa-shopping-cart"></i></a> </li>
+                    <li> <a href="#"><i class="fas fa-share-alt"></i></a></li>
+                </ul>
+        </header>
+        <main> 
+            <h2>Happiness Shop Online</h2>
+            <br>
+            <p>HAPPINESS IS JUST A CHOICE What will you choose today?</p>
+        </main>
+
+        <section class="section">
+            <div class="box box1">
+                <img src="../image/img1.jpg"  alt="blog imag" >
+                <h2>"Get happy stay there"</h2>
+                <h3>Mug</h3>
+                <p>24.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box1')"> add to cart  </button>
+            </div>
+            <div class="box box2">
+                <img src="../image/img2.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3>Sleeve Unisex T-Shirt</h3>
+                <p>34.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box2')"> add to cart  </button>
+            </div>
+            <div class="box box3">
+                <img src="../image/img10.jpg" alt="blog imag" >
+                <h2>"get happy stay there"</h2>
+                <h3>Backpack</h3>
+                <p>79.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box3')"> add to cart  </button>
+            </div>
+            <div class="box box4">
+                <img src="../image/img4.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3>Trucker Cap</h3>
+                <p>34.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box4')"> add to cart  </button>
+            </div>
+            <div class="box box5">
+                <img src="../image/img11jpg.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3>Original Large organic tote bag</h3>
+                <p>34.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box5')"> add to cart  </button>
+            </div>
+            <div class="box box6">
+                <img src="../image/img6.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3>Rich!" Unisex Hoodie</h3>
+                <p>49.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box6')"> add to cart  </button>
+            </div>
+            <div class="box box7">
+                <img src="../image/img22.jpg" alt="blog imag" >
+                <h2>"get happy and stay threre"</h2>
+                <h3>Tote bag</h3>
+                <p>13.00</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box7')"> add to cart  </button>
+            </div>
+            <div class="box box8">
+                <img src="../image/img23.jpg" alt="blog imag" >
+                <h2>"get happy and stay threre"</h2>
+                <h3> Eco Tote Bag</h3>
+                <p>32.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box8')"> add to cart  </button>
+            </div>
+            <div class="box box9">
+                <img src="../image/img24.jpg" alt="blog imag" >
+                <h2>"get happy and stay threre"</h2>
+                <h3>Tote bag</h3>
+                <p>44.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box9')"> add to cart  </button>
+            </div>
+            <div class="box box10">
+                <img src="../image/img13.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3> Grey Embroidered Baby Bib</h3>
+                <p>29.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box10')"> add to cart  </button>
+            </div>
+            <div class="box box11">
+                <img src="../image/img14.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3>Baby Jersey Short Sleeve Tee</h3>
+                <p>29.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box11')"> add to cart  </button>
+            </div>
+            <div class="box box12">
+                <img src="../image/img15.jpg" alt="blog imag" >
+                <h2> "Happiness is just a choice" </h2>
+                <h3> Infant Tee </h3>
+                <p>34.99</p>
+                <a href="../html/testimonial.html"> Read more </a>
+                <button onclick="Add('.box12')"> add to cart  </button>
+            </div>
+        </section>
+        <footer id="subscribe">
+            <li> <a href="#UP"> <i class="fas fa-arrow-up"></i> Up </a></li>
+                <p><i> Subscribe us</i></p>
+                <input type="text" placeholder="Name" name="name" >
+                <input type="text" placeholder="Email " name="mail">
+                <input type="submit" value="Subscribe">          
+        </footer>
+    </div>
+    
+    <script src="../javascript/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+@import url(footer.css);
+@import url(input.css);
+@import url(header.css);
+body{
+               
+    background-color:#154076;
+    font-family: cursive;
+    color: blanchedalmond;
+    
+
+}
+html {
+    scroll-behavior: smooth;
+    text-align: center;
+  }
+
+h2{
+    font-family: cursive;
+}
+p{
+    font-family: system-ui;
+}
+a{
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contener{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+     "header    "
+     "main      "
+     "section   "
+     " footer   "
+    ;
+  
+  
+}
+.section{
+    display: grid;   
+    grid-template-columns: auto auto auto;
+
+}
+
+section{
+              
+    grid-area:section;
+}
+
+main{
+    margin: 20px;
+    padding: 15px;
+    background-color: #36678b ;
+    border-radius: 20px;
+    grid-area:main; 
+}
+
+.box{
+    width: auto;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid#6495ED;
+    border-radius: 20px;
+    background-color: #6495ED;
+    text-align: center;   
+}
+
+img{
+     max-width: 90%;
+     height: auto; 
+     padding: 3px;
+     border-radius: 20px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+ul li{
+   
+    margin: 5px;
+    padding: 5px;
+    
+   
+}
+
+i , a{
+    font-size: 20px;
+    color: cornsilk;
+    text-decoration: none;
+    border-radius: 30px;
+    
+}
+a:hover {
+   
+   background-color: #36678b;
+   padding: 10px;
+   transition: 0.5s ease;
+}
+
+
+/* --------------------------------@media---------------------------*/
+
+
+@media  (max-width: 500px){
+
+    .contener{
+    
+    grid-template-areas:
+     "header "
+     " main "
+     " section"
+     " footer" ;
+    }
+    .section{
+          
+        grid-template-columns: auto  ;
+    
+    }
+    .box{
+        width: 360px;
+       
+    }
+    main{
+        width: 360px;
+       
+    }
+
+     ul{
+      
+       flex-direction: column;
+
+    }
+    body{
+        font-size: 20px;
+    }              
+
+   
+}
+@media(min-width: 501px) and (max-width: 700px){
+    .contener{
+        grid-template-areas:
+         "header   "
+         "main    "
+         "section  "
+         "footer " ;
+        
+        }
+        .section{
+          
+            grid-template-columns: auto auto ;
+        
+        }
+        body{
+            font-size: 20px;
+        }  
+}
+@media(min-width: 701px) and (max-width: 1024px){
+
+    .contener{
+    grid-template-areas:
+     "header    "
+     "main     "
+     "section    "
+     "footer   " ;
+    
+    }
+    .section{
+          
+        grid-template-columns: auto auto auto  ;
+    
+    }
+    body{
+        font-size: 20px;
+    }  
+}
