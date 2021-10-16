@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+        <!-- This is bootstrab link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <!-- my style sheet link -->
+        <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="container">
+            <!-- This is the header of the page -->
+            <header>
+                <div class="shop-logo">
+                    <img src="./images/logo.jpg">
+                </div>
+    
+                <!-- bootstrap nav -->
+                <!-- i make some chainges in bootstrab code -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="shipping.html">Shipping</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="cart.html">Cart </a>
+                          </li>
+                          <li class="nav-item" >
+                            <button type="submit" class="btn btn-secondary">Log in</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </header>
+
+    <div class="cart-container">
+        <div class="cart-text"><h2>Cart</h2></div>
+
+        <div class="cart">
+            <div class="items">
+                <h5>Items:</h5>
+                <ul id="items-list"> 
+                </ul>
+            </div>
+            <form action="/action_page.php">
+              <label for="fname">Discount Coupon</label>
+              <input type="text" id="coupon" name="Discount Coupon" placeholder="try A10 , AAA , KSA ... for discount 10%" >
+              <div class="btn-confirm">
+                <button type="button" class="btn btn-primary" onclick="checkCoupon()">add</button>
+              </div>              
+                      
+              <label for="order-type">Select order type</label>
+              <select id="order-type" name="order-type">
+                <option value="Delivery" id="delivery">Delivery</option>
+                <!-- it is not working -->
+                <option value="Collection" id="collection" onclick="orderTypeCost()">Collection</option>
+              </select>
+
+              <label for="delivery-type">Select Delivery type</label>
+              <select id="delivery-type" name="order-type">
+                <option value="Delivery">Express Delivery</option>
+                <option value="Collection">Delay Delivery</option>
+              </select>
+
+              <div class="vat">
+                <label for="vat"><h5>VAT:</h5></label>
+                <label id="vat"></label>
+              </div>
+              <div class="delivery-cost">
+                <label for="delivery-cost"><h5>Delivery cost:</h5></label>
+                <label id="delivery-cost"></label>
+              </div>
+              <div class="discount">
+                <label for="discount"><h5>Discount:</h5></label>
+                <label id="discount"></label>
+              </div>
+
+            <div class="total-price">
+                <label for="price"><h5>Total:</h5></label>
+                <label id="price"></label>
+              </div>
+            
+              <div class="btn-confirm">
+                <button type="button" class="btn btn-primary" id="confirm-order" onclick="confirmOrder()">Confirm order</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <script src="cart2.js"></script>
+</body>
+</html>
