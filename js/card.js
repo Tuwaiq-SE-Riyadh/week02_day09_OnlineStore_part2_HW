@@ -328,6 +328,7 @@ function discountCoupons()
         const coupon_td_input = document.createElement("td")
                 const coupon_input = document.createElement("input")
                             coupon_input.setAttribute("id","coupon_input")
+                            coupon_input.setAttribute("placeholder","KSA10 to 10% Discount")
                 const coupon_button = document.createElement("button")
                             coupon_button.setAttribute("id","coupon_button")
                         
