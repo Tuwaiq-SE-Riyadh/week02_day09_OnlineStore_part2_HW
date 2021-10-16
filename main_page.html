@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Main Page</title>
+</head>
+<body onload="adding()">
+    <div id="parent">
+
+        <!-- Logo -->
+        <div class="div_logo">
+            <img class="logo" src="images/Logo.png" alt="logo">
+        </div>
+
+        <!-- Nav bar -->
+        <div class="menu-outer">
+            
+            </ul>
+
+            <ul >
+                <li ><a href="main_page.html">Home</a></li>
+                <li><a href="about_us.html" target="_blank">About us</a></li>
+            </ul>
+            <div class="login-container">
+                <form action="">
+                    <input class="login-input" type="text" placeholder="Email">
+                    <input class="login-input" type="password" name="" id="" placeholder="password">
+                    <input class="login-input-btn" type="submit" value="login">
+                </form>
+            </div>
+            
+            
+        </div>
+
+        <!-- Items cards -->
+        <div class="mainDiv">
+            <div class="container" >
+                <div class="box black"> 
+                    <h1 class="title-item blue-clr">Mountain Morning</h1> 
+                    <img class="card-img" src="images/pic2.jpg" alt=" alt" style=" filter: grayscale(100%);">
+                    <p class="desc-item">Why settle for blank walls, when you can transform them into stunning vista points. </p>
+                    <p>Price: 15$</p>
+                    <button id="btn-cart1" class="button button1 end"  onclick="addToCart('Mountain Morning',15,'images/pic2.jpg')" data-value3="Mountain Morning" data-value2="images/pic2.jpg" value="15"> Add to cart</button>
+                </div>
+
+               <div class="box yellow">
+                    <h1 class="title-item blue-clr">Wildwood</h1> 
+                    <img class="card-img" src="images/pic3.jpg" alt=" alt" style=" filter: grayscale(100%);">
+                    <p class="desc-item">"Wildwood" by Ishita Banerjee Ishita Banerjee</p>
+                    <p>Price: 19$</p>
+                    <button id="btn-cart2" class="button button2 end"  onclick="addToCart( 'Wildwood',19,'images/pic3.jpg')" value="2"> Add to cart</button>
+                </div>
+
+                <div class="box red">
+                    <h1 class="title-item blue-clr">Love Moi</h1> <br>
+                    <img class="card-img" src="images/pic4.jpg" alt=" alt" style=" filter: grayscale(100%);">
+                    <p class="desc-item">Keep your furry and feathery friends close, whether they are a galloping stallion or a dog taking a selfie.</p>
+                    <p>Price: 25$</p>
+                    <button class="button button3 end"  onclick="addToCart( 'Love Moi',25,'images/pic4.jpg')" value="3"> Add to cart</button>
+                </div>
+
+                <div class="box blue">
+                    <h1 class="title-item blue-clr">Peacock Transition I</h1> 
+                    <img class="card-img" src="images/pic5.jpg" alt=" alt" style=" filter: grayscale(100%);">
+                    <p class="desc-item">Keep your furry and feathery friends close, whether they are a galloping stallion or a dog taking a selfie.</p>
+                    <p>Price: 19$</p>
+                    <button class="button button4 end"  onclick="addToCart( 'Peacock Transition I',19,'images/pic5.jpg')" value="4"> Add to cart</button>
+                </div>
+
+                <div class="box black"> 
+                    <h1 class="title-item blue-clr">Boca Boys</h1> 
+                    <img class="card-img" src="images/pic6.jpg" alt=" alt">
+                    <p class="desc-item">boca boys, Evans, Charlotte Private Collection Bridgeman Images. </p>
+                    <p>Price: 15$</p>
+                    <button  class="button button1" onclick="addToCart( value)" value="5"> Add to cart</button>
+                </div>
+
+                <div class="box yellow">
+                    <h1 class="title-item blue-clr">Where You Will Find Me</h1> 
+                    <br>
+                    <img class="card-img" src="images/pic7.jpg" alt=" alt">
+                    <p class="desc-item">"Wildwood" by Ishita Banerjee Ishita Banerjee</p>
+                    <p>Price: 19$</p>
+                    <button class="button button2"  onclick="addToCart( value)" value="6"> Add to cart</button>
+                </div>
+
+                <div class="box red">
+                    <h1 class="title-item blue-clr">Royal Velvet I</h1> <br> <br>
+                    <img class="card-img" src="images/pic8.jpg" alt=" alt">
+                    <p class="desc-item">Curious to try something new? Why not learn the language of colors?</p>
+                    <p>Price: 19$</p>
+                    <button class="button button2"  onclick="addToCart( value)" value="7"> Add to cart</button>
+                    <a href="https://www.art.com/" target="_blank">Read more</a>
+                </div>
+
+                <div class="box blue">
+                    <h1 class="title-item blue-clr">Open Meadow II</h1> 
+                    <img class="card-img" src="images/pic9.jpg" alt=" alt">
+                    <p class="desc-item">Keep your furry and feathery friends close, whether they are a galloping stallion or a dog taking a selfie.</p>
+                    <p>Price: 19$</p>
+                    <button class="button button2" onclick="addToCart( value)" value="8"> Add to cart</button> 
+                    <a href="https://www.art.com/" target="_blank">Read more</a>
+                </div>
+        </div>
+    </div>
+          
+        
+          </div>
+          <div class="footer"> 
+                <div class="table-info"> 
+                    <h3>Our Branches</h3>
+                    <table id="customers">
+                        <tr>
+                          <th>City</th>
+                          <th>Locaion</th>
+                          <th>Number</th>
+                        </tr>
+                        <tr>
+                          <td>Riyadh</td>
+                          <td>Turky bin Salman st, Al alia, Riyadh</td>
+                          <td>0123456789</td>
+                        </tr>
+                        <tr>
+                            <td>Jeddah</td>
+                            <td>Turky bin Salman st, Al alia, Riyadh</td>
+                            <td>0123456789</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="s-m-icons">
+                     <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><img src="images/Twitter.png" alt=""></a>
+                    <img src="images/youtube-.png" alt="">
+                    <img src="images/facebook.png" alt="">
+                </div>
+            
+          </div>
+   
+   <script src="main.js"></script>
+</body>
+</html>
