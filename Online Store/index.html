@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- This is bootstrab link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- my style sheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This is the container for the page -->
+    <div class="container">
+
+        <!-- This is the header of the page -->
+        <header>
+            <div class="shop-logo">
+                <img src="./images/logo.jpg">
+            </div>
+
+            <!-- bootstrap nav -->
+            <!-- i make some chainges in bootstrab code -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="shipping.html">Shipping</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart </a>
+                      </li>
+                      <li class="nav-item" >
+                        <button type="submit" class="btn btn-secondary">Log in</button>
+                      </li>
+                      <!-- <li class="nav-item">
+                        <button type="submit" class="btn btn-primary">cart</button>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+
+        <!-- This is the main of the page -->
+        <main>
+            <div class="main-text">
+                <p class="fs-1">iFitness</p>
+                <p class="fs-4">Your helth is your Fitness</p>
+            </div>
+        </main>
+
+
+        <div class="items">
+            <h1>New Items</h1>
+        </div>
+
+        <!-- This is the items (cards) -->
+        <div class="cards">
+            <div class="crad1">
+                <img src="./images/item1.jpg">
+                <div class="card-block">
+                  <h4 class="card-title">Resistance Bands Set</h4>
+                  <p class="card-text">SR 115</p>
+                  <a href="#" data-name="Resistance Bands Set" class="add-to-cart btn btn-secondary">Add to cart</a>
+                </div>
+                <!-- <h3>Resistance Bands Set</h3>
+                <p>SR 115</p> -->
+            </div>
+            <div class="crad2">
+                <img src="./images/item2.jpg">
+                <div class="card-block">
+                  <h4 class="card-title">Adjustable Dumbbells</h4>
+                  <p class="card-text">SR 230</p>
+                  <a href="#" data-name="Dumbbells" class="add-to-cart btn btn-secondary">Add to cart</a>
+                </div>
+                <!-- <h3>Adjustable Dumbbells</h3>
+                <p>SR 230</p> -->
+            </div>
+            <div class="crad3">
+                <img src="./images/item3.jpg">
+                <div class="card-block">
+                  <h4 class="card-title">Ab Roller Wheel</h4>
+                  <p class="card-text">SR 150</p>
+                  <a href="#" data-name="Ab Roller Wheel" class="add-to-cart btn btn-secondary">Add to cart</a>
+                </div>
+                <!-- <h3>Ab Roller Wheel</h3>
+                <p>SR 150</p> -->
+            </div>
+            <div class="crad4">
+                <img src="./images/item4.jpg">
+                <div class="card-block">
+                  <h4 class="card-title">Pushup Bars</h4>
+                  <p class="card-text">SR 95</p>
+                  <a href="#" data-name="Pushup Bars" class="add-to-cart btn btn-secondary">Add to cart</a>
+                </div>
+                <!-- <h3>Pushup Bars</h3>
+                <p>SR 95</p> -->
+            </div>
+        </div>
+
+            <!-- Testimonial -->
+        <div class="testimonial">
+            <h1>Testimonial</h1>
+        </div>
+        <div class="testimonial-content">
+                <img src="./images/user.jpg" style="width:90px">
+                <p class="user-msg" id="user">Thank you, the equipments is very good</p>
+                <p><span>Ahmed</span></p>
+        </div>
+
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>

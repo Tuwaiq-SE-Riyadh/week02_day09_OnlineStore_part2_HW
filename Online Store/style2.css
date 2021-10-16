@@ -1,0 +1,76 @@
+body {
+    background-color: white;
+}
+
+.container {
+    min-width: 80%;
+    border:solid 1px gray;
+    border-radius: 12px;
+    min-height: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+header {
+    min-height: 100px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+
+}
+
+.nav-item {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.shop-logo {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding: 5px;
+     border: 1px solid rgba(58, 58, 58, 0.829);
+     border-radius: 15px;
+     background-color: white;
+} 
+
+main {
+    min-height: 800px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+    border: 1px solid rgba(58, 58, 58, 0.829);
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.background-img {
+    background-image: url(./images/main-backgr.jpg);
+    height: 800px;
+    width: auto;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.main-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight:normal;
+    font-size: 20px;
+    margin-left: 50px; 
+}
+
+

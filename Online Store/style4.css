@@ -1,0 +1,121 @@
+
+
+.container {
+    min-width: 90%;
+    border:solid 1px gray;
+    border-radius: 12px;
+    min-height: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.cart-container {
+    display: grid;
+    min-height: 300px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+
+
+}
+
+header {
+    min-height: 100px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+
+}
+
+.nav-item {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+.shop-logo {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding: 5px;
+     border: 1px solid rgba(58, 58, 58, 0.829);
+     border-radius: 15px;
+     background-color: white;
+} 
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .cart {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .cart-text {
+      text-align: center;
+  }
+
+  .items {
+    padding: 10px;
+  }
+
+  .price {
+      padding: 10px;
+      border: solid black 1px;
+
+  }
+  .vat {
+    padding: 10px;
+  }
+  .discount {
+    padding: 10px;
+  }
+  .delivery-cost {
+      padding: 10px;
+  }
+  .total-price {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #price {
+    margin-left: 10px;
+}
+  #delivery-cost {
+    margin-left: 10px;
+}
+  #discount {
+    margin-left: 10px;
+}
+  #vat {
+    margin-left: 10px;
+  }
+  #total-price {
+    margin-left: 10px;
+  }
+
+#items-list {
+    list-style: none;
+    padding: 10px;
+    font-size: 18px;
+}
+.btn-confirm {
+    display: grid;
+    justify-content: center;
+}
