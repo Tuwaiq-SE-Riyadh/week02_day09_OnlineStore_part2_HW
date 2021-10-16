@@ -290,6 +290,7 @@ function uniqueN(){
     let userNum = Math.floor(Math.random() * 100);
     arrayOfCart = JSON.parse(window.localStorage.getItem('cart'));
     Users.push([userNum,arrayOfCart]);
+    alert("your order has been confermed successfuly");
 }
 
  
