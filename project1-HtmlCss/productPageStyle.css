@@ -1,0 +1,132 @@
+div.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+          
+}
+/*----------------------------------------navbar--------------------------------*/
+div.navbar{
+   
+    display: grid;
+    background-color: #333;
+    grid-template-columns: 90% 10%;
+    row-gap: 100px;
+    grid-area: nav;
+    
+}
+
+
+div.icon{
+    padding: 15%;
+    float: right;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+  }
+  
+  li.nav {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover{
+    background-color: #111;
+  }
+
+  /*----------------------------------------end of navbar--------------------------------*/
+
+
+/*--------------------------------------main--------------------------------------------*/
+
+.main{
+    width: 100%;
+    display: grid;
+    grid: 'image image tab tab tab';
+   padding-top: 100px;
+   padding-bottom: 200px; 
+   padding-left: 10px;
+    grid-gap: 20px;
+    float: left;
+   
+}
+
+
+
+.proImage{
+    background-image: url('https://assets.bigcartel.com/product_images/efd6a2d6-70e1-4f0c-a1d5-0f7576764176/candles.jpg?auto=format&fit=max&w=1000');
+    background-size: 100% 100%; 
+    grid-area: image;
+    width: 100%;
+    padding: 0%;
+    border: 2px solid black;
+    
+}
+
+
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 70%;
+    grid-area: tab;
+  }
+  
+  
+  th, td {
+    padding: 15px;
+  }
+
+#cartP{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    height: 30px;
+    width: 155%;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.cart:hover{
+
+    background-color: rgb(34, 34, 34);  
+}
+
+
+/*--------------------------------------main--------------------------------------------*/
+
+
+
+
+
+   /*------------------------------------------------Footer------------------------------------*/
+
+   div.Footer{
+    display: flex;
+    background-color: #333;
+    grid-area: footer;
+    column-gap: 100px;
+    justify-content: center;
+
+  }
+
+
+  /*-------------------------------------------Footer-----------------------------------*/

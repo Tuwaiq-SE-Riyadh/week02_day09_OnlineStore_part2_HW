@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="cartPageStyle.css">
+</head>
+<body  onload="cartPage()">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h4><b>Shopping Cart</b></h4>
+                        </div>
+                        <div id= "numItems" class="col align-self-center text-right text-muted"></div>
+                    </div>
+                </div>
+                <div id= "parent" class="row border-top border-bottom">
+                    <!-------------------item div----------------------->
+                    
+
+                    
+                    <!-------------------item div----------------------->
+                </div>
+               
+                   
+                
+                
+                <div class="back-to-shop"><a href="CataloguePage.html">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+            </div>
+            <div class="col-md-4 summary">
+                <div>
+                    <h5><b>Summary</b></h5>
+                </div>
+                <hr>
+                <div class="row">
+                    <div id="itemsfainalnum" class="col" style="padding-left:0;"></div>
+                    <div id= "TOTAL" class="col text-right"></div>
+                </div>
+                <form>
+                        <p>DELIVERY</p> <select id = "se" onchange="deliveryop(), Alltotal()">
+                                <option class="text-muted" value="op111">Collection</option>
+                                <option class="text-muted" value="op222">delivery</option>
+                            </select>
+                              <p>SHIPPING</p> <select id="selectShipping" onchange="Alltotal()" disabled = "false">
+                                                <option class="text-muted" value="Op1">Standard-Delivery- 5.00$</option>
+                                                <option class="text-muted" value="Op2">Quick-Delivery- 12.00$</option>
+                                            </select>
+                            
+                    
+                </form>
+                <p>GIVE CODE</p> <input type="text" id="code" placeholder="Enter your code">
+                    <button style="background-color: black; color:white" onclick="Alltotal()">Enter</button>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div id="vat" class="col"></div>
+                    <div class="col">TOTAL PRICE</div>
+                    <div id="AllPrice" class="col text-right"></div>
+                </div> <button class="btn" onclick="uniqueN()">CONFIRM ORDER</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="project.js"></script>
+</body>
+</html>
