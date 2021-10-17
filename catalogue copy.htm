@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <header>
+        <!-- login and search section -->
+        <ul class="d-flex justify-content-between list-unstyled align-items-center px-3">
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active"><img id="logo" src="assets/images/logo.png" alt="logo"></a>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"
+                            aria-hidden="true"></i></button>
+                </form>
+            </li>
+            <li class="nav-item d-flex justify-content-between align-items-center">
+                <span><i class="fa fa-user-circle text-primary fa-2x" aria-hidden="true"></i></span>
+                <a href="#" class="btn btn-outline-primary mx-2" data-toggle="modal"
+                    data-target="#exampleModal">User</a>
+            </li>
+            <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="./cart.htm"><img id="shopping-cart-img" src="./assets/images/shopping-cart.png"
+                        alt="shopping cart"><span id="numberOfProducts">0</span></a>
+            </li>
+
+            <!-- Modal login and register -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login | Register</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <nav aria-label="login modal">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                        href="#nav-home" role="tab" aria-controls="nav-home"
+                                        aria-selected="true">Login</a>
+                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                        href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                        aria-selected="false">Register</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                    aria-labelledby="nav-home-tab">
+                                    <form action="/login.php" method="post" class="my-4">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" class="form-control"
+                                                placeholder="user@example.com" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" required id="password"
+                                                class="form-control">
+                                        </div>
+
+                                        <input type="submit" value="Login" class="btn btn-primary">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
+                                    <form action="/register.php" method="post" class="my-4">
+                                        <div class="form-group">
+                                            <label for="name">name</label>
+                                            <input type="text" name="text" id="name" class="form-control"
+                                                placeholder="user name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" class="form-control"
+                                                placeholder="user@example.com" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" id="password" class="form-control"
+                                                required>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="gender" id="male"
+                                                    value="male" checked>
+                                                Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="gender" id="female"
+                                                    value="female" checked>
+                                                Female
+                                            </label>
+                                        </div>
+                                        <input type="submit" value="Login" class="btn btn-primary">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <!-- sticky navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top" aria-label="navbar">
+            <a class="navbar-brand" href="./index.htm">Home</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./about-us.htm">About Us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./meet-teams.htm">Meet our team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./catalogue.htm">Catalogue</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- products -->
+    <main class="mb-4">
+        <h1 class="text-center my-4" style="color: #43514c;">Sale Products</h1>
+        <div id="popular-products" class="container">
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">1000$</span><span> <del
+                                                class="bade bade-alert">1100</del></p>
+
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="1" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample1"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample1">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample1">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">2000$</span><span> <del
+                                                class="bade bade-alert">2100</del></p>
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="2" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample2"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample2">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample2">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">3000$</span><span> <del
+                                                class="bade bade-alert">3100</del></p>
+
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="3" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample3"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample3">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample3">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">4000$</span><span> <del
+                                                class="bade bade-alert">4100</del></p>
+
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="4" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample4"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample4">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample4">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">5000$</span><span> <del
+                                                class="bade bade-alert">5100</del></p>
+
+
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="5" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="popular-product">
+                        <div class="card w-100 overflow-hidden">
+                            <img src="https://picsum.photos/200" alt="product" class="product-image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">Occaecat laboris aliqua sunt exercitation.
+                                    <a class="text-decoration-none" data-toggle="collapse" href="#collapseExample5"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample5">
+                                        view more
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample5">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                                <div class="rating-wrap d-flex justify-content-between align-items-center my-2">
+                                    <span>
+                                        <i class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star text-gold"></i><i class="fa fa-star text-gold"></i><i
+                                            class="fa fa-star"></i>
+                                    </span>
+                                    <span class="label-rating text-muted"> 34 reviews</span>
+                                </div>
+                                <p id='price-section'>price: <span id='price'><span
+                                            class="badge badge-success">6000$</span><span> <del
+                                                class="bade bade-alert">6100</del></p>
+
+
+                                <a href="#" class="btn btn-primary addToCart">Add To Cart <i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i></a><input type="hidden" class='product-number'
+                                    data-id="6" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="py-4 px-2 bg-light w-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img src="assets/images/logo.png" alt="">
+                    <small class="d-block mb-3 text-muted">© 2021-2022</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Products</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Clients</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Business</a></li>
+                        <li><a class="text-muted" href="#">Education</a></li>
+                        <li><a class="text-muted" href="#">Government</a></li>
+                        <li><a class="text-muted" href="#">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script defer src="assets/js/app.js"></script>
+    <script defer src="assets/js/cart.js"></script>
+</body>
+
+</html>
