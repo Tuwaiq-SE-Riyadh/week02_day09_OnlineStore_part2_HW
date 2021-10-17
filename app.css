@@ -1,0 +1,445 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+img {
+    padding: 5px;
+    border: 1px solid #09c;
+}
+
+.text-gold {
+    color: #FFA500;
+}
+
+#logo {
+    width: 45px;
+    height: 45px;
+    border: 0px;
+}
+
+footer img {
+    border: 0px;
+}
+
+#shopping-cart-img {
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+
+button {
+    border: 1px solid #f1f1f1;
+}
+
+.slider-overlay {
+    background-color: #000;
+    opacity: 0.6;
+}
+
+#carouselExampleIndicators {
+    width: 600px;
+    height: 500px !important;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardHeader h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--text-HeadingFont);
+    color: #000;
+}
+
+@media (max-width: 991px) {
+    section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardHeader h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 446px) {
+    section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardHeader h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 280px) {
+    section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardHeader h2 {
+        font-size: 1.5rem;
+    }
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>p {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--text-mainFont);
+    color: #000;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>a {
+    color: #000;
+    font-weight: 600;
+    font-family: var(--text-mainFont);
+    font-size: 1.2rem;
+    position: relative;
+    border: none;
+    margin: 5px;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>a::after {
+    content: "";
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>a::after:hover {
+    -webkit-animation: borderAnimate 0.4s forwards 1 linear;
+    animation: borderAnimate 0.4s forwards 1 linear;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+section.awardDesigns>.awardHeadingContainer>div.row>div>div.awardDesc>a:hover::after {
+    -webkit-animation: borderAnimate 0.4s forwards 1 linear;
+    animation: borderAnimate 0.4s forwards 1 linear;
+}
+
+section.awardDesigns>.carouselOuterContainer {
+    overflow: hidden;
+    margin: auto;
+    width: auto;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: -webkit-transform 0.7s ease-in-out;
+    transition: -webkit-transform 0.7s ease-in-out;
+    -o-transition: transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem {
+    position: relative;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 2px solid #f1f1f1;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>img {
+    width: 600px;
+    height: 400px;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>img:hover~.carouselItemLayer {
+    opacity: 1;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer:hover {
+    opacity: 1;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer h3 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer h3 {
+        font-size: 1.5rem;
+    }
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a {
+    color: #000;
+    font-weight: 600;
+    font-family: var(--text-mainFont);
+    font-size: 1.2rem;
+    position: relative;
+    border: none;
+    margin: 5px;
+}
+
+@media (max-width: 991px) {
+    section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a {
+        font-size: 1rem;
+    }
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a::after {
+    content: "";
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a::after:hover {
+    -webkit-animation: borderAnimate 0.4s forwards 1 linear;
+    animation: borderAnimate 0.4s forwards 1 linear;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+section.awardDesigns>.carouselOuterContainer>.carouselInnerContainer>.craouselItem>.carouselItemLayer>a:hover::after {
+    -webkit-animation: borderAnimate 0.4s forwards 1 linear;
+    animation: borderAnimate 0.4s forwards 1 linear;
+}
+
+section.awardDesigns>.carouselIndicators>.dirIndicators>span {
+    cursor: pointer;
+}
+
+section.awardDesigns>.carouselIndicators>.numericIndicators #slideNumber {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+@-webkit-keyframes borderAnimate {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@keyframes borderAnimate {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes carouselImgAnimate {
+    0% {
+        -webkit-transform: skew(15deg);
+        transform: skew(15deg);
+    }
+
+    100% {
+        -webkit-transform: skew(0);
+        transform: skew(0);
+    }
+}
+
+@keyframes carouselImgAnimate {
+    0% {
+        -webkit-transform: skew(15deg);
+        transform: skew(15deg);
+    }
+
+    100% {
+        -webkit-transform: skew(0);
+        transform: skew(0);
+    }
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transform-origin: 100% 100%;
+}
+
+.carousel-testimonial-img>img {
+    width: 200px;
+    height: 200px;
+}
+
+tbody>tr>td>img {
+    width: 150px;
+    height: 150px;
+}
+
+.aboutus-section {
+    padding: 90px 0;
+}
+
+.aboutus-title {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.aboutus-title::after {
+    background: #09c none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 54px;
+}
+
+.aboutus-text {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0 0 35px;
+}
+
+a:hover,
+a:active {
+    color: #09c;
+    text-decoration: none;
+    outline: 0;
+}
+
+.aboutus-more {
+    border: 1px solid #09c;
+    border-radius: 25px;
+    color: #09c;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+}
+
+.feature .feature-box .iconset {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    position: relative;
+    width: 18%;
+}
+
+.feature .feature-box .iconset::after {
+    background: #09c none repeat scroll 0 0;
+    content: "";
+    height: 150%;
+    left: 43%;
+    position: absolute;
+    top: 100%;
+    width: 1px;
+}
+
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
+
+
+.feature .feature-box .feature-content {
+    float: left;
+    padding-left: 28px;
+    width: 78%;
+}
+
+.feature .feature-box .feature-content h4 {
+    color: #0f0f0f;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0 5px;
+}
+
+.feature .feature-box .feature-content p {
+    color: #606060;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.icon {
+    color: #09c;
+    padding: 0px;
+    font-size: 40px;
+    border: 1px solid #09c;
+    border-radius: 100px;
+    color: #09c;
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 70px;
+}
+
+#cart-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    list-style: none;
+}
+
+#cart-products>div>div>span {
+    color: #09c;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+
+}
