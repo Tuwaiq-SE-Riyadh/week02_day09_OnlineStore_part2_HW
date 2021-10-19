@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    table, th, td {
+      border:1px solid rgb(58, 58, 59);
+    }
+/*  retrieved from https://www.w3schools.com/css/css_table_align.asp */
+    td {
+    text-align: center;
+    }
+    h2 {text-align: center;} 
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:rgb(214, 212, 106);">
+
+    <form id="form">
+        <label for="discount coupons">discount coupons:</label><br>
+        <input type="text" id="name" name="name" value=""><br>
+
+        <div class="container0">
+
+
+        </div>
+        
+    </form>
+
+    
+<!-- was not sure how to insert rows to tables and I looked online and found help at 
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_table_insertrow -->
+      <table style="width:100%" id="myTable">
+        <tr>
+          <td>PRODUCT</td>
+          <td>QUANTITY</td>
+          <td>PRICE</td>
+        </tr>
+        
+      </table>  
+    
+    <div class="container1">
+
+      <h2>Select  Collection or Delivery</h2>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Collection
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Delivery
+          </label>
+        </div>
+      </form>
+    </div>
+       
+<!-- found  help to saperate radio buttons from each other at https://stackoverflow.com/questions/28543752/multiple-radio-button-groups-in-one-form-->
+    <div class="container2">
+      <h2> Select a Delivery Option</h2>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Free 
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Experss
+          </label>
+        </div>
+        <div class="form-check">
+         <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option3">
+         <label class="form-check-label" for="exampleRadios3">
+         Priority 
+         </label>
+       </div>
+    </div>
+    <!-- source https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick-->
+  <button onclick="addRow()" type="button" >click to View cart</button>
+  <script src=onlineStore.js></script> 
+  <!-- <script src=table_Control.js ></script> -->
+</body>
+</html>
