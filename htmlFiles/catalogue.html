@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/catalogueStyle.css">
+    <title>Catalogue</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoImag">
+            <img src="../images/logo.png" alt="" width="160" height="100">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="loginIcon">
+            <a href="cart.html"><img id="shopping-cart" src="../images/shopping-cart.png" alt="" width="50" height="30"></a> 
+            <button class="button">Login</button>
+        </div>
+    </div>
+    <div class="contentOfPage">
+        <h1>Items</h1>
+        <div class="grid-container">
+
+            <div class="grid-item">
+                <h3>Books Lamp</h3>
+                <img class="itemImg" src="../images/lamp1.png" width="100" height="100">
+                <p>A great lamp for a reader, we've up-cycled a stack of hardcover books into a one-of-a-kind sturdy, footed lamp.</p>
+                <p>10💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Books Lamp',10,'../images/lamp1.png')">Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Large Filament Lightbulb</h3>
+                <img class="itemImg" src="../images/lamp2.png" width="100" height="100">
+                <p> Lamp is 14" tall to top of lightbulb,New filament lightbulb, as shown in photos, INCLUDED</p>
+                <p>20💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>s
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Large Filament Lightbulb',20,'../images/lamp2.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Radio Up-cycled Lamp</h3>
+                <img class="itemImg" src="../images/lamp3.png" width="100" height="100">
+                <p>Lamp is approx. 9" high to top of filament lightbulb x 6 5/8" wide x 1 7/8" deep, 15 watt max.</p>
+                <p>30💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Radio Up-cycled Lamp',30,'../images/lamp3.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Coke Bottle Tin Hand Crafted Lamp</h3>
+                <img class="itemImg" src="../images/lamp4.png" width="100" height="100">
+                <p>8" bottom new fabric lampshade that clips onto a regular lightbulb- Lamp is 19" high from bottom of base to top of lampshade</p>
+                <p>40💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Coke Bottle Tin Hand Crafted Lamp',40,'../images/lamp4.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Cube Lamp</h3>
+                <img class="itemImg" src="../images/lamp5.png" width="100" height="100">
+                <p>intage scored and numbered solid wood 4" cube base - All new wiring and lamp parts -Bulb as shown is INCLUDED.</p>
+                <p>5💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Cube Lamp',5,'../images/lamp5.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Camera Lamp</h3>
+                <img class="itemImg" src="../images/lamp6.png" width="100" height="100">
+                <p>Lamp is 8" high from bottom of base to top of filament lightbulb- All new wiring and lamp parts.</p>
+                <p>15💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Camera Lamp',15,'../images/lamp6.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Vintage Pentax Camera Lamp</h3>
+                <img class="itemImg" src="../images/lamp7.png" width="100" height="100">
+                <p>New 8" bottom black parchment lampshade that clips onto a regular light bulb- Lamp is approx. 16" high to top of lamp shade.</p>
+                <p>25💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Vintage Pentax Camera Lamp',25,'../images/lamp7.png')" >Quick add to cart</button>
+            </div>
+
+            <div class="grid-item">
+                <h3>Vintage Blue White Lamp</h3>
+                <img class="itemImg" src="../images/lamp8.png" width="100" height="100">
+                <p>10 bottom new fabric lampshade that clips onto a regular lightbulb s- Lamp is 16" high from bottom of base to top of lamp shade.</p>
+                <p>10💸</p>
+                <label class="container">White
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Black
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="addToCart('Vintage Blue White Lamp',10,'../images/lamp8.png')" >Quick add to cart</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="../js/catalogue.js"></script>
+</body>

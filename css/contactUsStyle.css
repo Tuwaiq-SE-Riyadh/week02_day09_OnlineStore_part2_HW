@@ -1,0 +1,189 @@
+/******************* navbar ********************/
+/******************* navbar ********************/
+/******************* navbar ********************/
+body{
+    margin: 0;
+    background-color: rgb(191, 196, 202);
+}
+.underline{
+    text-decoration: underline;
+}
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(241, 232, 219);
+}
+.logoImag {
+    position: absolute;
+}
+.navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginIcon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 20px;
+}
+.button {
+    background-color: #58b8ab; 
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 20ch;
+    border-color: aliceblue;
+    
+}
+.navbar .navigation ul li{
+  list-style: none;
+  float:left;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold; 
+    
+}
+.navbar .navigation ul li a{
+    text-decoration: none;
+    color:black;
+    
+    
+}
+.navbar .navigation ul li a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+/******************* contentOfPage *******************/
+
+/* ---------Table of contact Us---------*/
+/* ---------Table of contact Us---------*/
+/* ---------Table of contact Us---------*/
+/* Note : I get some flex properties for W3School */
+table{
+  padding: 5px;
+}
+.contentOfPage{
+    width: 100%;
+    height: auto;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900px;
+    font-style: italic;
+}
+.t1 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+.t1 td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+.t1 tr:nth-child(even) {
+    background-color: #bac5a8;
+}
+.t1 tr:nth-child(odd) {
+    background-color: #567577;
+}
+/* ---------Form of contact Us---------*/
+/* ---------Form of contact Us---------*/
+/* ---------Form of contact Us---------*/
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-left: 250px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 0;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+/******************* Responsive page *******************/
+
+/*  Small devices (phones, 576px and up) */
+@media  (max-width: 576px) {
+
+  .navbar .navigation ul li{
+      padding: 5px !important;
+      font-size: 12px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
+  .navbar .navigation ul li{
+      padding: 10px;
+      font-size: 15px;
+  }
+  
+}

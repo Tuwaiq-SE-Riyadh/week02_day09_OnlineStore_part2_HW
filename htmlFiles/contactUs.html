@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contactUsStyle.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoImag">
+            <img src="../images/logo.png" alt="" width="160" height="100">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="underline"><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="loginIcon">
+            <button class="button">Login</button>
+        </div>
+    </div>
+    <div class="contentOfPage">
+        <h1>Contact us</h1>
+        <table class="t1">
+            <tr style="background-color: rgb(136, 155, 172);">
+                <th>Department</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+            </tr>
+            <tr>
+                <td>HR</td>
+                <td><a href="mailto:hr@saad.xom">hr@saad.xom</a></td>
+                <td>+966-05300001</td>
+            </tr>
+            <tr>
+                <td>IT</td>
+                <td><a href="mailto:it@saad.com">it@saad.com</a></td>
+                <td>+966-05300002</td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td><a href="mailto:info@saad.com">info@saad.com</a></td>
+                <td>+966-05300003</td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+            <div class="container">
+                <form action="#">
+                <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                    <option selected value="Select your country">Select your country</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="usa">UK</option>
+                    <option value="Other">Other</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                </div>
+                </div>
+                <br>
+                <div class="row">
+                <input type="submit" value="Submit">
+                </div>
+                </form>
+            </div>
+        
+    </div>  
+    
+
+</body>
+</html>
