@@ -1,0 +1,241 @@
+body{
+    background-image: url('Background/background3.jpg');
+    background-size: 100% 100%;
+    padding-top: 10px;
+}
+button{
+    padding: 20px;
+}
+button.addToCard{
+    width: 120px;
+    height: 100;
+    border-radius: 66%;
+    background-color: rgb(171, 173, 162);
+    color: rgb(217, 221, 204);
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    padding: 1px;
+    border:2px;
+    filter: brightness(110%);
+    filter: grayscale(20%);
+}
+img.imgCatogray{
+    width: 100px;
+    height: 100px;
+}
+img#shopping{
+    width: 30px;
+    height: 30px;
+}
+.homePage{
+    background-color: rgb(108, 112, 85);
+    background-size: 100% 400px;
+    height: 300px;
+    width: 1000px;
+    border-radius: 40px;
+    margin: 2% 3% 2% 15%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size:70px;
+    font-family:fantasy;
+    font-weight: bold;
+    color: rgb(209, 212, 198);
+}
+#suggestion{
+    background-color: rgb(158, 160, 150);
+    background-size: 100% 400px;
+    height: 200px;
+    width: 500px;
+    border-radius: 40px;
+    margin: 2% 3% 2% 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.catogray{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    height: 230px;
+    width: 100;
+}
+h2,p,#layout,#Order,th,td{
+    font-size:15px;
+    font-family:fantasy;
+    font-weight: bold;
+    color: rgb(98, 119, 112);
+}
+form,#Order,#layout{
+    font-size:30px;
+}
+h2,th,td,.customer{
+    font-size:40px;
+    color: rgb(75, 78, 59);
+}
+.navigation{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    background-color: rgb(228, 231, 210);
+    font-size:20px;
+    font-family:fantasy;
+    font-weight: bold;
+    border-radius:15px;
+    padding: 10px 65px;
+    margin: 2px;
+}
+.right{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    left: 20px;
+    
+}
+/* image of shopping button */
+#shopping{
+    height: 30px;
+}
+
+.left{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 20px;
+}
+.plant{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 460px;
+    background-color: rgb(228, 231, 210);
+}
+.design, .price, .name{
+    background-color: rgb(108, 112, 85);
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(228, 231, 210);
+    text-align: center;
+}
+a.nav {
+    color: rgb(108, 112, 85);
+  }
+
+a{
+    color: rgb(228, 231, 210);
+}
+a:hover{
+    color: rgb(151, 127, 132);
+}
+#width{
+    width: 200px;
+}
+#bottom{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    column-gap: 20px;
+    background-color:  rgb(108, 112, 85);
+    padding: 1%;
+    margin: 5%;
+
+}
+.b {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+  #des{
+    background-color: rgb(108, 112, 85);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2% 40%;
+    color: rgb(228, 231, 210);
+    text-align: center;
+    width: 250px;
+    height: 100px;
+  } 
+ul li{
+    list-style-type: circle;
+    font-size:15px;
+    font-family:fantasy;
+    font-weight: bold;
+    color: rgb(228, 231, 210);
+}
+.b{
+    list-style-type: circle;
+    font-size:20px;
+    font-family:fantasy;
+    font-weight: bold;
+    color: rgb(51, 63, 59);
+}
+
+
+/* Catalouepage Style*/
+.catalouePage{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    border-radius: 2%;
+    background-color: rgb(228, 231, 210);
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+#items{
+    width: 100%;
+    height: 300px;
+}
+
+/* Shipping Page style */
+#layout,.table,.customer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 100px;
+    background-color: rgb(228, 231, 210);
+    border-radius: 5%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 500px;
+}
+
+#aim{
+    color: rgb(228, 231, 210);
+}
+#myPlants{
+    font-size:20px;
+    font-family:fantasy;
+    font-weight: bold;
+    color: rgb(51, 63, 59);
+}
+table, th, td {
+    align-items: center;
+    border: 1px solid rgb(51, 63, 59);
+  }
+.Review {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+}
+.Review img {
+    float: left;
+    margin-right: 20px;
+    width: 90px;
+    height: 90px;
+}
+ 
