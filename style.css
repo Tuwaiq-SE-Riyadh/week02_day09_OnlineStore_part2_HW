@@ -9,7 +9,7 @@ button{
 
 }
 button.addToCard{
-    width: 200px;
+    width: 300px;
     height: 50px;
     color: rgb(217, 221, 204);
     background-color: rgb(108, 112, 85);
@@ -148,12 +148,13 @@ a:hover{
     column-gap: 20px;
     background-color:  rgb(108, 112, 85);
     padding: 1%;
-    margin: 5%;
+    margin: 2%;
 
 }
 .b {
     grid-row-start: 2;
     grid-row-end: 3;
+    
 }
 #des{
     background-color: rgb(108, 112, 85);
@@ -210,6 +211,7 @@ ul li{
     row-gap: 20px;
     column-gap: 20px;
     margin-top: 20px;
+    margin-left: 20%;
 }
 #items{
     width: 100%;
