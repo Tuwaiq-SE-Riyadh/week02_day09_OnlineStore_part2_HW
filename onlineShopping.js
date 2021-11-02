@@ -1,20 +1,22 @@
-// Your online store is required to implement the following:
-//     * Within the entirety of your site, you should have the following JavaScript functionality:
-//     * Create a functional shopping cart for your online store.
-//     * Allow a “quick add to cart” from the catalogue page.
-//     * Each product’s page must also have the option to “add to cart”.
+// # Online Store
+// you created Online store with HTML and CSS now you will complete your work by adding some javaScript to it to make it more interactive.
 
-//     * When an item is added, an alert should tell the user what the current total is.
-//     * Create a new html page for the cart section which allows the user to see what is in their cart, 
-//         each item’s price, and the total cost (remember to add VAT!).
+// Your online store is required to implement the following:
+// * Within the entirety of your site, you should have the following JavaScript functionality:
+//     * When an item is added, an alert should tell the user what the current total is.>>>>>>>>>>>>>> ??????????
 //     * Create a form which allows for “discount coupons”.
 //     * Create forms to allow a user to select “collection” or “delivery”.
 //     * Create forms for different delivery options.
 //     * Your total should change based on what delivery option is chosen and if a certain coupon is applied.
-//     * Create a “conﬁrm order” button which alerts the user that their order was successful and generates them a reference number (keyword: generate)
-
+//     * Create a “conﬁrm order” button which alerts the user that their order was successful and generates them 
+//a reference number (keyword: generate)
 
 // DONE: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//     * Create a new html page for the cart section which allows the user to see what is in their cart, 
+//each item’s price, and the total cost (remember to add VAT!). DONE
+//     * Create a functional shopping cart for your online store. DONE
+//     * Allow a “quick add to cart” from the catalogue page. DONE
+//     * Each product’s page must also have the option to “add to cart”. DONE
 
 class Product{
     constructor(name, image, price, count){
@@ -51,6 +53,7 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     button.addEventListener("click", function() {
         cardCount(products[i])
         totalPrice(products[i])
+
     })
 }
 
@@ -175,7 +178,19 @@ function displayCart(){
         <hr>
         `
     })
+
+
+    //inside div         
+        // <form>
+        //     <label>Enter Code: </label>
+        //     <input type="text"></input>
+        //     <button></input>
+        // </form>
     CartContainer.innerHTML += `
+    <!-- * Create a form which allows for “discount coupons”. -->
+    <div class="discount">
+
+    </div>
     <div class="TotalContainer">
         <h5 class="totalH">Total price</h5>
         <p>${totalCost},00RS</p>

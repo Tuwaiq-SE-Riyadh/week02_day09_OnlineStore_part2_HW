@@ -184,16 +184,20 @@ ul li{
 /* Catalouepage Style*/
 .catalouePage{
     display:grid;
-    max-width: 800px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     padding: 2%;
-    border-radius: 2%;
     background-color: rgb(228, 231, 210);
-    row-gap: 20px;
     column-gap: 20px;
     margin-top: 20px;
+    background-size: 100% 400px;
+    border-radius: 40px;
+}
+
+.product-image{
+    width: 300px;
+    height: 250px;
 }
 .productInfor{
     display:flex;
@@ -284,4 +288,23 @@ table, th, td {
     align-items: center;
     justify-content:flex-end;
     column-gap: 20px;
+}
+
+.buttonCart{
+    width: 70px;
+    height: 70px;
+}
+
+
+.right{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.count{
+    position: relative;
+    /* top: 1%; */
+    bottom: 100%;
+    left: 15%;
+    /* transform: translate(-50%, -50%);  */
 }
